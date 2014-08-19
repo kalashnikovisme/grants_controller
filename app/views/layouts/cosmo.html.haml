@@ -10,6 +10,7 @@
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "cosmo", media: "all"
+    = stylesheet_link_tag    "web/application", media: "all"
     = yield(:page_stylesheet) if content_for?(:page_stylesheet)
 
 
