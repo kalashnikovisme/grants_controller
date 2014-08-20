@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.17'
-gem 'sqlite3'
+gem 'pg'
 gem 'haml-rails'
 gem 'validates'
 gem 'twitter-bootstrap-rails'
@@ -26,7 +26,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
