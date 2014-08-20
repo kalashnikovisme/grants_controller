@@ -22,5 +22,4 @@ rerun.txt
 pickle-email-*.html
 .project
 *.sqlite3-journal
-config/initializers/secret_token.rb
 *~
