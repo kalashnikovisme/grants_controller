@@ -1,0 +1,9 @@
+ru:
+  web:
+    admin:
+      grant_operators:
+        index:
+          title: Грантооператоры
+      contests:
+        index:
+          title: Конкурсы

@@ -12,8 +12,8 @@
     .navbar.navbar-default
       .container-fluid
         %ul.nav.navbar-nav.navbar-right
-          %li= link_to t('helpers.grant_operators'), admin_grant_operators_path
-          %li= link_to t('helpers.contests'), admin_contests_path
-          %li= link_to t('helpers.admin_panel'), admin_path
-          %li= link_to t('helpers.sign_out'), session_path, method: :delete
+          %li= link_to t('helpers.logic.grant_operators'), admin_grant_operators_path
+          %li= link_to t('helpers.logic.contests'), admin_contests_path
+          %li= link_to t('helpers.app.admin_panel'), admin_path
+          %li= link_to t('helpers.app.sign_out'), session_path, method: :delete
     = yield
