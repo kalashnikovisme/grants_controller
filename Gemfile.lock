@@ -80,6 +80,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -100,6 +101,11 @@ GEM
       activesupport (= 3.2.17)
       bundler (~> 1.0)
       railties (= 3.2.17)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (3.2.17)
       actionpack (= 3.2.17)
       activesupport (= 3.2.17)
@@ -166,8 +172,10 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   minitest (= 4.7.5)
+  pg
   pry
   rails (= 3.2.17)
+  rails_12factor
   russian
   sass-rails (~> 3.2.3)
   simple_form
