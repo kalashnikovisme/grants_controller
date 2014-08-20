@@ -9,4 +9,5 @@ GrantsController::Application.routes.draw do
       resources :grant_operators, except: :show
     end
   end
+  get "/admin" => "web/sessions#new"
 end
