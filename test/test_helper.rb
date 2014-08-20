@@ -14,4 +14,5 @@ FactoryGirl.reload
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
+  include AuthHelper
 end

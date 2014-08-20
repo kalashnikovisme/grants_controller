@@ -25,6 +25,11 @@ FactoryGirl.define do
     n % 2
   end
 
+  sequence :password do |n|
+    "#{n}password#{n}"
+  end
+
+
   sequence :process_personal_data do |n|
     true
   end

@@ -4,10 +4,11 @@ gem 'rails', '3.2.17'
 gem 'sqlite3'
 gem 'haml-rails'
 gem 'validates'
-gem 'twitter-bootswatch-rails', '~> 3.2.0'
-gem 'twitter-bootswatch-rails-helpers'
+gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'russian'
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
