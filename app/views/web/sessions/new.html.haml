@@ -1,0 +1,11 @@
+= title t('.please_authenticate')
+= simple_form_for @user, url: session_path, method: :post, html: { class: "form-horizontal" } do |f|
+  %fieldset
+    %legend
+      = t('.please_authenticate')
+    .field
+      = f.input :email, as: :string, label: false, input_html: { class: "form-control" }
+    .field
+      = f.input :password, as: :password, label: false, input_html: { class: "form-control" }
+    .form-actions
+      = f.button :submit, t('buttons.enter'), class: 'btn btn-primary btn-lg'

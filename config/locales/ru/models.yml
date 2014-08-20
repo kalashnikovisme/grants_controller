@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    models:
+      grant_operator: Грантооператор
+      user: Пользователь
+      contest: Конкурс
+    attributes:
+      grant_operator:
+        title: Название
+        url: URL
+        created_at: Дата создания
+      contest:
+        title: Название
+        description: Описание
+        link: Ссылка
+        grant_operator: Грантооператор
+        created_at: Дата создания

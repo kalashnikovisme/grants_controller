@@ -1,0 +1,14 @@
+ru:
+  helpers:
+    actions: Действия
+    links:
+      cancel: Отмена
+      new: Новый
+      edit: Изменить
+      destroy: Удалить
+    logic:
+      grant_operators: Грантооператоры
+      contests: Конкурсы
+    app:
+      admin_panel: Админка
+      sign_out: Выйти

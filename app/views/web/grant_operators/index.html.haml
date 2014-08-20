@@ -1,0 +1,17 @@
+- model_class = GrantOperator
+.page-header
+  %h1=t '.title', default: model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:title)
+      %th= model_class.human_attribute_name(:url)
+      %th= model_class.human_attribute_name(:created_at)
+  %tbody
+    - @grant_operators.each do |grant_operator|
+      %tr
+        %td= grant_operator.id
+        %td= grant_operator.title
+        %td= link_to grant_operator.url, grant_operator.url
+        %td=l grant_operator.created_at
