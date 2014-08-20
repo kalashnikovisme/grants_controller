@@ -1,15 +1,19 @@
-= stylesheet_link_tag    "application", media: "all"
-
-.navbar.navbar-default
-  .navbar-header
-    %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", type: "button"}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    %a.navbar-brand{ href: root_path }
-      = t('helpers.project_name')
-  .navbar-collapse.collapse.navbar-responsive-collapse
-    %ul.nav.navbar-nav.navbar-right
-      - if signed_in? and current_user.role.admin?
-        %li= link_to t('admin.panel'), admin_path
-        %li= link_to t('helpers.sign_out'), session_path, method: :delete
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "grants_controller"
+    = csrf_meta_tags
+    = stylesheet_link_tag    "application", media: "all"
+    = yield(:page_stylesheet) if content_for?(:page_stylesheet)
+    = stylesheet_link_tag "application", media: "all"
+  %body{ style: "background-color: white" }
+    .navbar.navbar-default
+      .container-fluid
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to t('helpers.grant_operators'), admin_grant_operators_path
+          %li= link_to t('helpers.contests'), admin_contests_path
+          %li= link_to t('helpers.admin_panel'), admin_path
+          %li= link_to t('helpers.sign_out'), session_path, method: :delete
+    = yield
