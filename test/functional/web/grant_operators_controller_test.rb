@@ -1,9 +1,8 @@
 require 'test_helper'
 
-class Web::ContestsControllerTest < ActionController::TestCase
+class Web::GrantOperatorsControllerTest < ActionController::TestCase
   setup do
-    create :grant_operator
-    @contest = create :contest
+    @grant_operator = create :grant_operator
   end
 
   test "should get index" do

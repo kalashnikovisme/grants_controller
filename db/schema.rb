@@ -11,22 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140820113034) do
+ActiveRecord::Schema.define(:version => 20140820124114) do
 
   create_table "contests", :force => true do |t|
     t.text     "title"
     t.text     "description"
     t.text     "link"
-    t.text     "founder"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "grant_operator_id"
+  end
+
+  create_table "grant_operators", :force => true do |t|
+    t.text     "title"
+    t.text     "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
     t.text     "email"
-    t.text     "password"
     t.text     "password_digest"
-    t.text     "password_confirmation"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
   end

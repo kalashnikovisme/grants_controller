@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true,
                        on: :create,
                        length: { minimum: 8, maximum: 16 }
+  validates :password_confirmation, presence: true,
+                       on: :create,
+                       length: { minimum: 8, maximum: 16 }
 end
