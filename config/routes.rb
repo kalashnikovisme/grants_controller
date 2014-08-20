@@ -6,6 +6,7 @@ GrantsController::Application.routes.draw do
     resources :grant_operators, only: :index
     namespace :admin do
       resources :contests, except: :show
+      resources :grant_operators, except: :show
     end
   end
 end
