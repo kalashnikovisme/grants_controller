@@ -1,6 +1,6 @@
 = simple_form_for @grant_operator, url: { controller: "web/admin/grant_operators", action: action }, html: { class: 'form-horizontal' } do |f|
-  = f.input :title
-  = f.input :url
+  = f.input :title, as: :string
+  = f.input :url, as: :string
   .form-actions
     = f.button :submit, class: 'btn-primary'
     = link_to t('.cancel', default: t("helpers.links.cancel")), grant_operators_path, class: 'btn'

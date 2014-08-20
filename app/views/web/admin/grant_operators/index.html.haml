@@ -14,7 +14,7 @@
       %tr
         %td= link_to grant_operator.id, edit_admin_grant_operator_path(grant_operator)
         %td= grant_operator.title
-        %td= grant_operator.url
+        %td= link_to grant_operator.url, grant_operator.url
         %td=l grant_operator.created_at
         %td
           = link_to t('.edit', default: t("helpers.links.edit")), edit_admin_grant_operator_path(grant_operator), class: 'btn btn-mini'

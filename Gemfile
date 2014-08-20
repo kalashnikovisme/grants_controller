@@ -9,6 +9,7 @@ gem 'therubyracer'
 gem 'russian'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'simple_form'
+gem 'enumerize'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

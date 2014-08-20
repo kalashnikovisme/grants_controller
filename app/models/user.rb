@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation, :password_digest
+  attr_accessible :email,
+                  :password,
+                  :password_confirmation,
+                  :password_digest,
+                  :role
 
   has_secure_password
 
@@ -10,4 +14,8 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true,
                        on: :create,
                        length: { minimum: 8, maximum: 16 }
+
+  extend Enumerize
+
+  enumerize :role, in: [ :default_user, :admin ], default: :default_user
 end

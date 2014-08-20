@@ -17,7 +17,7 @@
         %td= link_to contest.id, edit_admin_contest_path(contest)
         %td= contest.title
         %td= contest.description
-        %td= contest.link
+        %td= link_to contest.link, contest.link
         %td= contest.grant_operator.title
         %td=l contest.created_at
         %td
