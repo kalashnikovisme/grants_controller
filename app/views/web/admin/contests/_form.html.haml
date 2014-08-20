@@ -2,7 +2,7 @@
   = f.input :title
   = f.input :description
   = f.input :link
-  = f.input :founder
+  = f.association :grant_operator
   .form-actions
     = f.button :submit, class: 'btn-primary'
     = link_to t('.cancel', default: t("helpers.links.cancel")), admin_contests_path, class: 'btn'

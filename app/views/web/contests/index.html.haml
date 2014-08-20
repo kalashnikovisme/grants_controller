@@ -8,7 +8,7 @@
       %th= model_class.human_attribute_name(:title)
       %th= model_class.human_attribute_name(:description)
       %th= model_class.human_attribute_name(:link)
-      %th= model_class.human_attribute_name(:founder)
+      %th= model_class.human_attribute_name(:grant_operator)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', default: t("helpers.actions")
   %tbody
@@ -18,6 +18,5 @@
         %td= contest.title
         %td= contest.description
         %td= contest.link
-        %td= contest.founder
+        %td= contest.grant_operator.title
         %td=l contest.created_at
-        %td

@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Web::ContestsControllerTest < ActionController::TestCase
   setup do
+    create :grant_operator
     @contest = create :contest
   end
 
