@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.17'
-gem 'sqlite3'
+gem 'pg'
 gem 'haml-rails'
 gem 'validates'
 gem 'twitter-bootstrap-rails'
@@ -23,6 +23,10 @@ group :test do
   gem "factory_girl_rails", "~> 4.0", require: false
   gem 'tconsole', git: "git://github.com/gma/tconsole"
   gem 'pry'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 gem 'jquery-rails'
