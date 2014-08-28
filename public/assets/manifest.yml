@@ -1,4 +1,10 @@
 ---
+audience_image.jpg: audience_image-cc49f4f7e3d4c6f3f3339ccf0a0750b8.jpg
+audience_image/index.jpg: audience_image-cc49f4f7e3d4c6f3f3339ccf0a0750b8.jpg
+background-top-image.jpg: background-top-image-e033f3a654d82fbe987c13b868cf1cf6.jpg
+background-top-image/index.jpg: background-top-image-e033f3a654d82fbe987c13b868cf1cf6.jpg
+for_free_image.png: for_free_image-3fb38bf1e749201374ab8cd3ec44c5b3.png
+for_free_image/index.png: for_free_image-3fb38bf1e749201374ab8cd3ec44c5b3.png
 goal_image.png: goal_image-8c5d896f46b0574165083f8b292e4ac8.png
 goal_image/index.png: goal_image-8c5d896f46b0574165083f8b292e4ac8.png
 application.js: application-e78fc3d7b819b457625c53837ae4b0b1.js
@@ -7,8 +13,8 @@ web/admin/application.js: web/admin/application-a7fa98ba2ef09a5dcc079d3f014a4e3c
 web/admin/application/index.js: web/admin/application-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 web/application.js: web/application-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 web/application/index.js: web/application-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
-application.css: application-1d0da5919c8f5481839d1f80a53d9053.css
-application/index.css: application-1d0da5919c8f5481839d1f80a53d9053.css
+application.css: application-fe38e383762706d5a5fb078ee4180ceb.css
+application/index.css: application-fe38e383762706d5a5fb078ee4180ceb.css
 web/admin/application.css: web/admin/application-1b13569e9620782f423d4cd3ce931750.css
 web/admin/application/index.css: web/admin/application-1b13569e9620782f423d4cd3ce931750.css
 web/application.css: web/application-1b13569e9620782f423d4cd3ce931750.css
