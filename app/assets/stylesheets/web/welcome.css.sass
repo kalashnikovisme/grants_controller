@@ -1,4 +1,61 @@
-.line_on_main_page
-  height: 200px
-  color: white
-  font-size: 20pt
+.home-section
+  background: #fafafa
+  color: #373737
+  border-bottom: solid 1px #eee
+  height: auto
+  width: auto
+  .inside
+    max-width: 1180px
+    margin: 0 auto
+    padding: 5% 20px
+    position: relative
+  .text
+    width: 40%
+    h2
+      font-size: 3em
+      line-height: 1.4em
+      margin-bottom: 1em
+      padding-top: 20%
+    h2:before
+      content: " "
+      width: 100px
+      height: 2px
+      display: block
+      margin-bottom: 1em
+      background: rgba(0,0,0,0.2)
+    p, li
+      font-size: 1.6em
+      line-height: 1.8em
+  .image
+    max-width: 50%
+    img
+      max-height: 100%
+      max-width: 100%
+
+.goal_section
+  background: #fafafa
+  .inside
+    .text
+      float: left
+    .image
+      float: right
+
+.audience_section
+  background: #fff
+  .inside
+    .text
+      float: right
+    .image
+      float: left
+
+.cf
+.cf
+  zoom: 1
+
+.cf:before,
+.cf:after
+  content: ""
+  display: table
+
+.cf:after
+  clear: both

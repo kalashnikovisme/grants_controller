@@ -1,5 +1,21 @@
-.row-fluid
-  .span8.line_on_main_page
-    = t('project_attributes.goal')
-  .span4.line_on_main_page
-    = image_tag "goal_image.jpg"
+%section.home-section.goal_section
+  .inside.cf
+    .text
+      %h2
+        = t('.goal')
+      %p
+        = t('project_attributes.goal')
+    .image
+      = image_tag "goal_image.png"
+%section.home-section.audience_section
+  .inside.cf
+    .image
+      = image_tag "audience_image.jpg"
+    .text
+      %h2
+        = t('.audience')
+      %p
+        %ul
+          - t('project_attributes.audiences').each do |audience|
+            %li
+              = audience
