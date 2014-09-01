@@ -11,12 +11,15 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'simple_form'
 gem 'enumerize'
 gem 'figaro'
-gem 'coveralls', require: false
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development, :test do
+  gem 'coveralls', require: false
 end
 
 group :test do
