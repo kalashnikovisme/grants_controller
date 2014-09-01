@@ -17,6 +17,9 @@ ru:
     contests:
       index:
         title: Актуальные конкурсы
+    helps:
+      index:
+        title: Справка
   placeholders:
     admin:
       grant_operator:

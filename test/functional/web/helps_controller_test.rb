@@ -5,8 +5,8 @@ class Web::HelpsControllerTest < ActionController::TestCase
     @help = create :help
   end
 
-  test "should get index" do
-    get :index
+  test "should get show" do
+    get :show, id: @help
     assert_response :success, @response.body
   end
 end

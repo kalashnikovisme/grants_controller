@@ -1,5 +1,6 @@
 class Web::HelpsController < Web::ApplicationController
-  def index
+  def show
     @helps = Help.all
+    @help = Help.find params[:id]
   end
 end
