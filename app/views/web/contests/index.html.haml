@@ -8,8 +8,9 @@
       - contests_row.each do |contest|
         .contest_cell.span3
           .contest_cell_title
-            %h4
-              = contest.title
+            = link_to contest.link, class: :link_button do
+              %h4
+                = contest.title
           .contest_cell_description
             = contest.description
           .contest_cell_operator.link_button
