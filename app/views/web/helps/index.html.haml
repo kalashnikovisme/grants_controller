@@ -1,0 +1,17 @@
+- model_class = Help
+.page-header
+  %h1=t '.title', default: model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:title)
+      %th= model_class.human_attribute_name(:body)
+      %th= model_class.human_attribute_name(:created_at)
+  %tbody
+    - @helps.each do |help|
+      %tr
+        %td= help.id
+        %td= help.title
+        %td= help.body
+        %td=l help.created_at
