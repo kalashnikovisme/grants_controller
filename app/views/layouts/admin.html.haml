@@ -16,4 +16,6 @@
           %li= link_to t('helpers.logic.contests'), admin_contests_path
           %li= link_to t('helpers.app.admin_panel'), admin_path
           %li= link_to t('helpers.app.sign_out'), session_path, method: :delete
-    = yield
+    .admin_container
+      .content
+        = yield

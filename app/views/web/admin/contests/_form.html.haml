@@ -1,9 +1,12 @@
 = simple_form_for @contest, url: { controller: "web/admin/contests", action: action }, html: { class: 'form-horizontal' } do |f|
   - f.with_options input_html: { class: :span6 } do |f|
-    = f.input :title, as: :string
-    = f.input :description
-    = f.input :link, as: :string
-    = f.association :grant_operator
+    = f.input :title, as: :string, placeholder: t('placeholders.admin.contest.title')
+    = f.input :description, placeholder: t('placeholders.admin.contest.description')
+    = f.input :link, as: :string, placeholder: t('placeholders.admin.contest.link')
+    = f.association :grant_operator, selected: 1
+    .additional_buttons
+      = t('.if_there_is_not_grant_operator')
+      = link_to t('.add_grant_operator'), new_admin_grant_operator_path, class: 'btn'
     .form-actions
       = f.button :submit, class: 'btn btn-primary'
       = link_to t('.cancel', default: t("helpers.links.cancel")), admin_contests_path, class: 'btn'
