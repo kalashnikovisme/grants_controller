@@ -13,6 +13,7 @@ ru:
         conditions: Условия
         our_conditions: На данный момент все услуги предоставляются бесплатно
         actual_contests: Актуальные конкурсы
+        helps: Справка
     contests:
       index:
         title: Актуальные конкурсы
