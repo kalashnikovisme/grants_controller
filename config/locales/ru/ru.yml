@@ -18,7 +18,7 @@ ru:
       index:
         title: Актуальные конкурсы
     helps:
-      index:
+      show:
         title: Справка
   placeholders:
     admin:

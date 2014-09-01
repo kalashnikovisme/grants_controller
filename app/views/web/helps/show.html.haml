@@ -1,13 +1,9 @@
 - model_class = Help
 .page-header
-  %h1=t '.title', default: model_class.model_name.human.titleize
-%ul.nav.nav-pills.nav-stacked
-  != helps_links(@helps)
-%p
-  %strong= model_class.human_attribute_name(:title) + ':'
-  %br
-  = @help.title
-%p
-  %strong= model_class.human_attribute_name(:body) + ':'
-  %br
-  = @help.body
+  %h1=t '.title'
+.row-fluid
+  .span3
+    %ul.nav.nav-pills.nav-stacked.helps_nav
+      != helps_links(@helps)
+  .span9
+    != @help.body
