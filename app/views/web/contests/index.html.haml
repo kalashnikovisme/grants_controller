@@ -1,22 +1,17 @@
 - model_class = Contest
 .page-header
   %h1=t '.title', default: model_class.model_name.human.pluralize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:title)
-      %th= model_class.human_attribute_name(:description)
-      %th= model_class.human_attribute_name(:link)
-      %th= model_class.human_attribute_name(:grant_operator)
-      %th= model_class.human_attribute_name(:created_at)
-      %th=t '.actions', default: t("helpers.actions")
-  %tbody
-    - @contests.each do |contest|
-      %tr
-        %td= contest.id
-        %td= contest.title
-        %td= contest.description
-        %td= link_to contest.link, contest.link
-        %td= contest.grant_operator.title
-        %td=l contest.created_at
+.row-fluid
+  - while @contests.any?
+    - contests_row = @contests.slice!(0..3)
+    .row_fluid
+      - contests_row.each do |contest|
+        .contest_cell.span3
+          .contest_cell_title
+            %h4
+              = contest.title
+          .contest_cell_description
+            = contest.description
+          .contest_cell_operator.link_button
+            = link_to contest.grant_operator.url, class: :link_button do
+              = contest.grant_operator.title
