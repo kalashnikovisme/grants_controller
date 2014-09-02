@@ -7,8 +7,9 @@
         %ul.main_buttons
           %li
             = link_to t('.actual_contests'), contests_path,  class: :btn
-          %li
-            = link_to t('.helps'), help_path(@help),  class: :btn
+          - if @help
+            %li
+              = link_to t('.helps'), help_path(@help),  class: :btn
 %section.home-section.goal_section
   .inside.cf
     .text
