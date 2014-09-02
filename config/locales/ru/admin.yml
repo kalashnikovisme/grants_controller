@@ -10,3 +10,6 @@ ru:
         form:
           if_there_is_not_grant_operator: "Если грантооператор отсутствует, добавьте его"
           add_grant_operator: Добавить грантооператора
+      helps:
+        index:
+          title: Справка
