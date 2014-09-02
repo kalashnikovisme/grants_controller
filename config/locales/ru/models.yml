@@ -4,6 +4,7 @@ ru:
       grant_operator: Грантооператор
       user: Пользователь
       contest: Конкурс
+      help: Справка
     attributes:
       grant_operator:
         title: Название
@@ -15,3 +16,6 @@ ru:
         link: Ссылка
         grant_operator: Грантооператор
         created_at: Дата создания
+      help:
+        title: Название раздела
+        body: Гипертекстовая начинка
