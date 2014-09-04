@@ -1,6 +1,6 @@
 class Web::Admin::ContestsController < Web::Admin::ApplicationController
   def index
-    @contests = Contest.all
+    @contests = ContestDecorator.decorate_collection Contest.all.reverse
   end
 
   def new
