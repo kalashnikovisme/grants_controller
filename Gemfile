@@ -12,7 +12,7 @@ gem 'simple_form'
 gem 'enumerize'
 gem 'figaro'
 gem 'draper'
-gem 'academic_degree'
+gem 'academic_degree', '~> 0.0.2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
