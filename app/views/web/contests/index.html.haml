@@ -9,8 +9,9 @@
         .contest_cell.span3
           .contest_cell_title
             = link_to contest.link, class: :link_button do
-              %h4
-                = contest.title
+              .text
+                %h4
+                  = contest.title
           .contest_cell_description
             = contest.lead
           .contest_cell_operator.link_button
