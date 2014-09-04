@@ -1,6 +1,7 @@
 - model_class = Contest
 .page-header
   %h1=t '.title', default: model_class.model_name.human.pluralize.titleize
+= link_to t('.new', default: t("helpers.links.new")), new_admin_contest_path, class: 'btn btn-primary'
 %table.table.table-striped
   %thead
     %tr
@@ -16,7 +17,7 @@
       %tr
         %td= link_to contest.id, edit_admin_contest_path(contest)
         %td= contest.title
-        %td= contest.description
+        %td= contest.lead
         %td= link_to contest.link, contest.link
         %td= contest.grant_operator.title
         %td=l contest.created_at

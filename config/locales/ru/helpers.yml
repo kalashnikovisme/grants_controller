@@ -9,6 +9,7 @@ ru:
     logic:
       grant_operators: Грантооператоры
       contests: Конкурсы
+      experts: Эксперты
       helps: Справка
     app:
       admin_panel: Админка

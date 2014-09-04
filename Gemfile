@@ -11,6 +11,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'simple_form'
 gem 'enumerize'
 gem 'figaro'
+gem 'draper'
+gem 'academic_degree'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

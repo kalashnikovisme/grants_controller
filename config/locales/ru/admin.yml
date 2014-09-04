@@ -13,3 +13,6 @@ ru:
       helps:
         index:
           title: Справка
+      experts:
+        index:
+          title: Эксперты

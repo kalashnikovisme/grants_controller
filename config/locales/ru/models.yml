@@ -5,6 +5,7 @@ ru:
       user: Пользователь
       contest: Конкурс
       help: Справка
+      expert: Эксперт
     attributes:
       grant_operator:
         title: Название
@@ -19,3 +20,12 @@ ru:
       help:
         title: Название раздела
         body: Гипертекстовая начинка
+        created_at: Дата создания
+      expert:
+        first_name: Фамилия
+        middle_name: Имя
+        last_name: Отчество
+        job: Место работы
+        post: Должность
+        degree: Учёная степень
+        created_at: Дата создания
