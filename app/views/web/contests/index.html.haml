@@ -1,20 +1,19 @@
 - model_class = Contest
 .page-header
   %h1=t '.title'
-.row-fluid
-  - while @contests.any?
-    - contests_row = @contests.slice!(0..3)
-    .row_fluid
-      - contests_row.each do |contest|
-        .contest_cell.span3
-          .contest_cell_title
-            = link_to contest.link, class: :link_button do
-              .text
-                %h4
-                  = contest.title
-          .contest_cell_description
-            = contest.lead
-          .contest_cell_operator.link_button
-            = link_to contest.grant_operator.url, class: :link_button do
-              .text
-                = contest.grant_operator.title
+- while @contests.any?
+  - contests_row = @contests.slice!(0..3)
+  .row-fluid.contest_row
+    - contests_row.each do |contest|
+      .contest_cell.span3
+        .contest_cell_title
+          = link_to contest.link, class: :link_button do
+            .text
+              %h4
+                = contest.title
+        .contest_cell_description
+          = contest.lead
+        .contest_cell_operator.link_button
+          = link_to contest.grant_operator.url, class: :link_button do
+            .text
+              = contest.grant_operator.title
