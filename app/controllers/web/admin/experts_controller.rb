@@ -1,6 +1,6 @@
 class Web::Admin::ExpertsController < Web::Admin::ApplicationController
   def index
-    @experts = ExpertDecorator.decorate_collection Expert.all.reverse
+    @experts = Expert.all.reverse
   end
 
   def new
