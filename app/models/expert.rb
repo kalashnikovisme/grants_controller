@@ -14,7 +14,7 @@ class Expert < ActiveRecord::Base
   validates :degree, presence: true
 
   extend Enumerize
-  include AcademicDegree
-  enumerize :degree, in: AcademicDegree.degree_list(:ussr, :ru),
-                     default: AcademicDegree.degree_list(:ussr, :ru).first
+  include AcademicDegreeHelper
+  enumerize :degree, in: AcademicDegreeHelper.russian_degree_list,
+                     default: AcademicDegreeHelper.russian_degree_list.first
 end

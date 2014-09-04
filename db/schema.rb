@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140901224541) do
+ActiveRecord::Schema.define(:version => 20140904004650) do
 
   create_table "contests", :force => true do |t|
     t.text     "title"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(:version => 20140901224541) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "grant_operator_id"
+  end
+
+  create_table "experts", :force => true do |t|
+    t.text     "first_name"
+    t.text     "middle_name"
+    t.text     "last_name"
+    t.text     "job"
+    t.text     "post"
+    t.text     "degree"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "grant_operators", :force => true do |t|

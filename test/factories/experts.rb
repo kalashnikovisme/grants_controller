@@ -7,6 +7,6 @@ FactoryGirl.define do
     last_name "MyText"
     job "MyText"
     post "MyText"
-    degree "MyText"
+    degree { Expert.degree.values.first }
   end
 end
