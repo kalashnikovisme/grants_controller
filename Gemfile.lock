@@ -9,6 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    academic_degree (0.0.1)
     actionmailer (3.2.17)
       actionpack (= 3.2.17)
       mail (~> 2.5.4)
@@ -181,6 +182,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  academic_degree
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.2.1)
   coveralls
