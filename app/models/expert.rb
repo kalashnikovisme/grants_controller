@@ -1,17 +1,15 @@
 class Expert < ActiveRecord::Base
   attr_accessible :degree,
-                  :first_name,
                   :job,
-                  :last_name,
-                  :middle_name,
-                  :post
+                  :post,
+                  :user_id
 
-  validates :first_name, presence: true
-  validates :middle_name, presence: true
-  validates :last_name, presence: true
+  belongs_to :user
+
   validates :job, presence: true
   validates :post, presence: true
   validates :degree, presence: true
+  validates :user_id, presence: true
 
   extend Enumerize
   include AcademicDegreeHelper

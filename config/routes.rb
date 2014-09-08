@@ -8,6 +8,7 @@ GrantsController::Application.routes.draw do
     namespace :admin do
       resources :contests, except: :show
       resources :experts, except: :show
+      resources :users, except: :show
       resources :helps, except: :show
       resources :grant_operators, except: :show
     end
