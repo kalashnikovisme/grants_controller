@@ -3,7 +3,12 @@ class User < ActiveRecord::Base
                   :password,
                   :password_confirmation,
                   :password_digest,
-                  :role
+                  :role,
+                  :first_name,
+                  :middle_name,
+                  :last_name
+
+  has_many :experts
 
   has_secure_password
 

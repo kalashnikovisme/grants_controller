@@ -24,11 +24,11 @@ class Web::Admin::ExpertsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     expert = Expert.last
-    assert_equal attributes[:first_name], expert.first_name
+    assert_equal attributes[:job], expert.job
   end
 
   test "should not create expert" do
-    attributes = { first_name: @expert.first_name }
+    attributes = { job: @expert.job }
 
     post :create, expert: attributes
     assert_response :success
@@ -45,12 +45,12 @@ class Web::Admin::ExpertsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     @expert.reload
-    assert_equal attributes[:first_name], @expert.first_name
+    assert_equal attributes[:job], @expert.job
   end
 
   test "should not update expert with render edit" do
     attributes = attributes_for :expert
-    attributes[:first_name] = nil
+    attributes[:job] = nil
     put :update, id: @expert, expert: attributes
 
     assert_response :success
