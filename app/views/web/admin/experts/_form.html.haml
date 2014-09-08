@@ -3,6 +3,7 @@
     = f.input :job, as: :string
     = f.input :post, as: :string
     = f.input :degree
+    = f.association :user, label_method: lambda { |user| "#{user.first_name} #{user.middle_name} #{user.last_name} | #{user.id}" }, value_method: :id
   .form-actions
     = f.button :submit, class: 'btn btn-primary'
     = link_to t('.cancel', default: t("helpers.links.cancel")), admin_experts_path, class: 'btn'
