@@ -1,6 +1,6 @@
 class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
-    @users = User.all.reverse
+    @users = UserDecorator.decorate_collection User.all.reverse
   end
 
   def new

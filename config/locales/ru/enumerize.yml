@@ -1,0 +1,6 @@
+ru:
+  enumerize:
+    user:
+      role:
+        default_user: Обыкновенный пользователь
+        admin: Администратор
