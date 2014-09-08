@@ -26,9 +26,9 @@ ru:
         post: Должность
         degree: Учёная степень
         created_at: Дата создания
+        user: Пользователь
       user:
         first_name: Фамилия
         middle_name: Имя
         last_name: Отчество
         role: Тип пользователя
-
