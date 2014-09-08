@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
                   :password_digest,
                   :role
 
+  has_many :experts
+
   has_secure_password
 
   validates :email, presence: true

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140904004650) do
+ActiveRecord::Schema.define(:version => 20140908205912) do
 
   create_table "contests", :force => true do |t|
     t.text     "title"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20140904004650) do
     t.text     "degree"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
 
   create_table "grant_operators", :force => true do |t|
