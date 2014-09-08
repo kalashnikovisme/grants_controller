@@ -10,6 +10,7 @@ ru:
       grant_operators: Грантооператоры
       contests: Конкурсы
       experts: Эксперты
+      users: Пользователи
       helps: Справка
     app:
       admin_panel: Админка

@@ -1,4 +1,4 @@
-class Web::Admin::UsersController < ApplicationController
+class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
     @users = User.all.reverse
   end

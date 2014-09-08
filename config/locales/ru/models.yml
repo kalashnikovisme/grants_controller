@@ -22,10 +22,13 @@ ru:
         body: Гипертекстовая начинка
         created_at: Дата создания
       expert:
-        first_name: Фамилия
-        middle_name: Имя
-        last_name: Отчество
         job: Место работы
         post: Должность
         degree: Учёная степень
         created_at: Дата создания
+      user:
+        first_name: Фамилия
+        middle_name: Имя
+        last_name: Отчество
+        role: Тип пользователя
+
