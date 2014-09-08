@@ -1,0 +1,10 @@
+= simple_form_for @user, url: { controller: 'web/admin/users', action: action }, html: { class: 'form-horizontal' } do |f|
+  = f.input :email
+  = f.input :password_digest
+  = f.input :role
+  = f.input :first_name
+  = f.input :middle_name
+  = f.input :last_name
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
+    = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'
