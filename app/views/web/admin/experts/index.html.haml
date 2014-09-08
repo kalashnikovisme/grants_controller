@@ -5,9 +5,6 @@
   %thead
     %tr
       %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:first_name)
-      %th= model_class.human_attribute_name(:middle_name)
-      %th= model_class.human_attribute_name(:last_name)
       %th= model_class.human_attribute_name(:job)
       %th= model_class.human_attribute_name(:post)
       %th= model_class.human_attribute_name(:degree)
@@ -17,9 +14,6 @@
     - @experts.each do |expert|
       %tr
         %td= link_to expert.id, edit_admin_expert_path(expert)
-        %td= expert.first_name
-        %td= expert.middle_name
-        %td= expert.last_name
         %td= expert.job
         %td= expert.post
         %td= expert.degree

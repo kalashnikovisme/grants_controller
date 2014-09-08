@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140908205912) do
+ActiveRecord::Schema.define(:version => 20140908222711) do
 
   create_table "contests", :force => true do |t|
     t.text     "title"
@@ -23,14 +23,11 @@ ActiveRecord::Schema.define(:version => 20140908205912) do
   end
 
   create_table "experts", :force => true do |t|
-    t.text     "first_name"
-    t.text     "middle_name"
-    t.text     "last_name"
     t.text     "job"
     t.text     "post"
     t.text     "degree"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "user_id"
   end
 
@@ -54,6 +51,9 @@ ActiveRecord::Schema.define(:version => 20140908205912) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.text     "role"
+    t.text     "first_name"
+    t.text     "middle_name"
+    t.text     "last_name"
   end
 
 end
