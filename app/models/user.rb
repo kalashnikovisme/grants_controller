@@ -6,7 +6,8 @@ class User < ActiveRecord::Base
                   :role,
                   :first_name,
                   :middle_name,
-                  :last_name
+                  :last_name,
+                  :avatar
 
   has_many :experts
 
@@ -19,6 +20,8 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true,
                        on: :create,
                        length: { minimum: 8, maximum: 16 }
+
+  mount_uploader :avatar, AvatarUploader
 
   extend Enumerize
 
