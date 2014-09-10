@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140908222711) do
+ActiveRecord::Schema.define(:version => 20140910234046) do
 
   create_table "contests", :force => true do |t|
     t.text     "title"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20140908222711) do
     t.text     "first_name"
     t.text     "middle_name"
     t.text     "last_name"
+    t.text     "avatar"
   end
 
 end
