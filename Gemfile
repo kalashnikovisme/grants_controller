@@ -13,6 +13,8 @@ gem 'enumerize'
 gem 'figaro'
 gem 'draper'
 gem 'academic_degree', '~> 0.0.2'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

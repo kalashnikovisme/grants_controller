@@ -2,9 +2,13 @@
   - f.with_options input_html: { class: :span6 } do |f|
     = f.input :email, as: :string
     = f.input :role
-    = f.input :first_name, as: :string
-    = f.input :middle_name, as: :string
-    = f.input :last_name, as: :string
+    = f.input :first_name, as: :string, input_html: { value: @user.first_name }
+    = f.input :middle_name, as: :string, input_html: { value: @user.middle_name }
+    = f.input :last_name, as: :string, input_html: { value: @user.last_name }
+    = f.label :avatar
+    - if @user.avatar.present?
+      = image_tag @user.avatar.thumb
+    = f.file_field :avatar
   .form-actions
     = f.button :submit, class: 'btn-primary'
     = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'
