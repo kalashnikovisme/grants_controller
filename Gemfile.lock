@@ -190,7 +190,7 @@ PLATFORMS
 DEPENDENCIES
   academic_degree (~> 0.0.2)
   bcrypt-ruby (~> 3.0.0)
-  carrierwave
+  carrierwave (= 0.10.0)
   coffee-rails (~> 3.2.1)
   coveralls
   draper
