@@ -13,7 +13,7 @@ gem 'enumerize'
 gem 'figaro'
 gem 'draper'
 gem 'academic_degree', '~> 0.0.2'
-gem 'carrierwave'
+gem 'carrierwave', '0.10.0'
 gem 'rmagick'
 
 group :assets do
