@@ -1,12 +1,6 @@
 %html(lang="en")
   %head
-    %meta(charset="utf-8")
-    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
-    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= content_for?(:title) ? yield(:title) : "grants_controller"
-    = csrf_meta_tags
-    = stylesheet_link_tag    "application", media: "all"
-    = yield(:page_stylesheet) if content_for?(:page_stylesheet)
+    = render 'layouts/head_tag'
   %body
     = render 'layouts/navbar'
     .container
