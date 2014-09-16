@@ -1,0 +1,17 @@
+.navbar.navbar-default
+  .navbar-header
+    %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", type: "button"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{ href: root_path }
+      = t('project_attributes.name')
+  .navbar-collapse.collapse.navbar-responsive-collapse
+    %ul.nav.navbar-nav
+      %li
+        = link_to t('helpers.logic.contests'), contests_path
+      %li
+        = link_to t('helpers.logic.grant_operators'), grant_operators_path
+      - if any_helps
+        %li
+          = link_to t('helpers.logic.helps'), help_path(any_helps)
