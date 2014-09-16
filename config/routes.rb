@@ -5,6 +5,7 @@ GrantsController::Application.routes.draw do
     resources :helps, only: :show
     resource :session, only: [ :new, :create, :destroy ]
     resources :grant_operators, only: :index
+    resources :users, only: [ :new, :create ]
     namespace :admin do
       resources :contests, except: :show
       resources :experts, except: :show
