@@ -21,6 +21,9 @@ ru:
     helps:
       show:
         title: Справка
+    users:
+      new:
+        title: Регистрация
   placeholders:
     admin:
       grant_operator:
