@@ -8,6 +8,7 @@
     = stylesheet_link_tag    "application", media: "all"
     = yield(:page_stylesheet) if content_for?(:page_stylesheet)
   %body
+    = render 'layouts/navbar'
     .container
       .content
         = yield

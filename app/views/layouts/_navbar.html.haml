@@ -12,6 +12,6 @@
         = link_to t('helpers.logic.contests'), contests_path
       %li
         = link_to t('helpers.logic.grant_operators'), grant_operators_path
-      - if @help
+      - if any_helps
         %li
-          = link_to t('helpers.logic.helps'), help_path(@help)
+          = link_to t('helpers.logic.helps'), help_path(any_helps)
