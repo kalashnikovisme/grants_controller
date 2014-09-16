@@ -15,3 +15,10 @@
       - if any_helps
         %li
           = link_to t('helpers.logic.helps'), help_path(any_helps)
+    %ul.nav.navbar-nav.navbar-right
+      - if signed_in?
+      - else
+        %li
+          = link_to t('helpers.sign_in'), new_session_path
+        %li
+          = link_to t('helpers.registration'), new_user_path

@@ -1,5 +1,8 @@
 ru:
   helpers:
+    sign_in: Войти
+    registration: Регистрация
+    sign_out: Выйти
     actions: Действия
     links:
       cancel: Отмена
