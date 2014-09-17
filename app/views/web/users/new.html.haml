@@ -19,10 +19,11 @@
         .form-group
           = f.input :last_name, as: :string
         .form-group
-          = f.label :avatar
-        - if @user.avatar.present?
-          = image_tag @user.avatar.thumb
-        = f.file_field :avatar
-        .form-actions
-          = f.button :submit, class: 'btn-primary'
+          - if @user.avatar.present?
+            = image_tag @user.avatar.thumb
+          %span.btn.btn-default.btn-file
+            = t('helpers.upload_avatar')
+            = f.file_field :avatar
+        .form-group
+          = f.button :submit, class: 'btn btn-primary'
           = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'
