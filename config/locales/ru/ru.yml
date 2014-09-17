@@ -24,6 +24,9 @@ ru:
     users:
       new:
         title: Регистрация
+    sessions:
+      new:
+        title: Авторизация
   placeholders:
     admin:
       grant_operator:
