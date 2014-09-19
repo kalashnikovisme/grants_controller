@@ -1,0 +1,29 @@
+= title t '.title'
+- model_class = User
+.page-header
+  %h1=t '.title'
+.form
+  = simple_form_for @user, url: { controller: 'web/users', action: :create }, html: { class: 'form-horizontal' } do |f|
+    - f.with_options input_html: { class: "col-lg-9" }, label_html: { class: "col-lg-3 control-label" }, error_html: { class: "help-block" } do |f|
+      %fieldset
+        .form-group
+          = f.input :email, as: :string
+        .form-group
+          = f.input :password, as: :string, input_html: { type: :password }
+        .form-group
+          = f.input :password_confirmation, as: :string, input_html: { type: :password }
+        .form-group
+          = f.input :first_name, as: :string
+        .form-group
+          = f.input :middle_name, as: :string
+        .form-group
+          = f.input :last_name, as: :string
+        .form-group
+          - if @user.avatar.present?
+            = image_tag @user.avatar.thumb
+          %span.btn.btn-default.btn-file
+            = t('helpers.upload_avatar')
+            = f.file_field :avatar
+        .form-group
+          = f.button :submit, class: 'btn btn-primary'
+          = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'

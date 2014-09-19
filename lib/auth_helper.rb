@@ -23,4 +23,9 @@ module AuthHelper
       @current_user ||= User.find(session[:user_id])
     end
   end
+
+  #Admin auth
+  def admin_signed_in?
+    signed_in? && current_user.role.admin?
+  end
 end

@@ -1,11 +1,14 @@
-= title t('.please_authenticate')
-= simple_form_for @user, url: session_path, method: :post, html: { class: "form-horizontal" } do |f|
-  %fieldset
-    %legend
-      = t('.please_authenticate')
-    .field
-      = f.input :email, as: :string, label: false, input_html: { class: "form-control" }
-    .field
-      = f.input :password, as: :password, label: false, input_html: { class: "form-control" }
-    .form-actions
-      = f.button :submit, t('buttons.enter'), class: 'btn btn-primary btn-lg'
+- title t('.title')
+.page-header
+  %h1
+    = t('.title')
+.form
+  = simple_form_for @user, url: session_path, method: :post, html: { class: "form-horizontal" } do |f|
+    - f.with_options input_html: { class: "col-lg-9" }, label_html: { class: "col-lg-3 control-label" } do |f|
+      %fieldset
+        .form-group
+          = f.input :email, as: :string
+        .form-group
+          = f.input :password, as: :password
+        .form-group
+          = f.button :submit, t('helpers.sign_in'), class: 'btn btn-primary btn-lg'
