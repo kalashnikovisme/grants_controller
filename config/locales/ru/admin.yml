@@ -1,6 +1,7 @@
 ru:
   web:
     admin:
+      panel: Админка
       grant_operators:
         index:
           title: Грантооператоры
