@@ -27,6 +27,11 @@ ru:
     sessions:
       new:
         title: Авторизация
+    user:
+      contest_requests:
+        index:
+          title: Ваши заявки на конкурсы
+          new: Добавить новую конкурсную заявку
   placeholders:
     admin:
       grant_operator:

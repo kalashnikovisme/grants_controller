@@ -9,7 +9,8 @@ class ContestRequest < ActiveRecord::Base
                   :real_methods,
                   :results,
                   :tasks,
-                  :user_id
+                  :user_id,
+                  :contest_title
 
   belongs_to :user
 
@@ -24,4 +25,5 @@ class ContestRequest < ActiveRecord::Base
   validates :results, presence: true
   validates :tasks, presence: true
   validates :user_id, presence: true
+  validates :contest_title, presence: true
 end
