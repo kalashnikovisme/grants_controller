@@ -32,6 +32,8 @@ ru:
         index:
           title: Ваши заявки на конкурсы
           new: Добавить новую конкурсную заявку
+        new:
+          title: Новая заявка на конкурс
   placeholders:
     admin:
       grant_operator:

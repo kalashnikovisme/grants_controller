@@ -12,6 +12,7 @@ FactoryGirl.define do
     multiplicativity "MyText"
     plan "MyText"
     estimates "MyText"
+    contest_title "MyText"
     user_id 1
   end
 end

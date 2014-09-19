@@ -3,25 +3,25 @@
     - f.with_options input_html: { class: "col-lg-9" }, label_html: { class: "col-lg-3 control-label" }, error_html: { class: "help-block" } do |f|
       %fieldset
         .form-group
-          = f.input :annotation
-        .form-group
-          = f.input :audience
-        .form-group
-          = f.input :estimates
-        .form-group
           = f.input :goal
         .form-group
-          = f.input :multiplicativity
+          = f.input :tasks
         .form-group
-          = f.input :plan
+          = f.input :annotation
         .form-group
           = f.input :problem
+        .form-group
+          = f.input :audience
         .form-group
           = f.input :real_methods
         .form-group
           = f.input :results
         .form-group
-          = f.input :tasks
+          = f.input :multiplicativity
+        .form-group
+          = f.input :plan
+        .form-group
+          = f.input :estimates
         .form-group
           = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
         .form-group
