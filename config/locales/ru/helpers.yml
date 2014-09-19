@@ -16,6 +16,7 @@ ru:
       experts: Эксперты
       users: Пользователи
       helps: Справка
+      contest_requests: Заявки на грант
     app:
       admin_panel: Админка
       sign_out: Выйти
