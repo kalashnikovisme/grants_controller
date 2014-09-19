@@ -13,6 +13,9 @@ GrantsController::Application.routes.draw do
       resources :helps, except: :show
       resources :grant_operators, except: :show
     end
+    scope module: :user do
+      resources :contest_requests, except: :show
+    end
   end
   get "/admin" => "web/admin/welcome#index"
 end
