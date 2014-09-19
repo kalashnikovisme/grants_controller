@@ -1,6 +1,10 @@
 ru:
   helpers:
+    sign_in: Войти
+    registration: Регистрация
+    sign_out: Выйти
     actions: Действия
+    upload_avatar: Загрузить аватар
     links:
       cancel: Отмена
       new: Новый

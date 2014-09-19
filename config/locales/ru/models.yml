@@ -33,3 +33,5 @@ ru:
         last_name: Отчество
         role: Тип пользователя
         avatar: Аватар
+        password_confirmation: Подтверждение пароля
+        password: Пароль
