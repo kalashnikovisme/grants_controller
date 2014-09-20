@@ -1,9 +1,9 @@
 .form
   = simple_form_for @contest_request, url: { controller: 'web/user/contest_requests', action: action }, html: { class: 'form-horizontal' } do |f|
-    - f.with_options input_html: { class: "col-lg-9" }, label_html: { class: "col-lg-3 control-label" }, error_html: { class: "help-block" } do |f|
+    - f.with_options input_html: { class: "col-lg-9", "data-container" => "body", "data-toggle" => "popover", "data-placement" => "right" }, label_html: { class: "col-lg-3 control-label"}, error_html: { class: "help-block" } do |f|
       %fieldset
         .form-group
-          = f.input :goal
+          = f.input :goal, input_html: { "data-content" => "Здесь будет короткая подсказка по разделу заявку + <a href = '/'>ссылка на подробную информацию</a>." }
         .form-group
           = f.input :tasks
         .form-group

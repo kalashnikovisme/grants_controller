@@ -13,15 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//
 
 $(document).ready(function(){
-  $("body").bind("click", function (e) {
-    $('a.dropdown-toggle').parent("li").removeClass("open");
-  });
-
-  $("a.dropdown-toggle").click(function (e) {
-    var $li = $(this).parent("li").toggleClass('open');
-    return false;
+  $('textarea.text').popover({
+    html: true,
+    content: function() {
+      return $(this).attr('data-content');
+    }
   });
 });
