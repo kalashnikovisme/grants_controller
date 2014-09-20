@@ -3,7 +3,8 @@ class Hint < ActiveRecord::Base
                   :subject,
                   :lead
 
-  validates :subject, presence: true
+  validates :subject, presence: true,
+                      uniqueness: true
   validates :body, presence: true
   validates :lead, presence: true
 end
