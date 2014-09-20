@@ -34,6 +34,10 @@ ru:
           new: Добавить новую конкурсную заявку
         new:
           title: Новая заявка на конкурс
+        edit:
+          title: Редактировать заявку на конкурс
+        form:
+          commit: Сохранить
   placeholders:
     admin:
       grant_operator:

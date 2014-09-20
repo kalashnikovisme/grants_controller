@@ -10,6 +10,7 @@ ru:
       new: Новый
       edit: Изменить
       destroy: Удалить
+      save: Сохранить
     logic:
       grant_operators: Грантооператоры
       contests: Конкурсы

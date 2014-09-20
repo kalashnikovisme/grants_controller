@@ -1,13 +1,13 @@
 = title
 - model_class = ContestRequest
-.page-header
+.page-header{ style: "border-bottom: none" }
   %h1=t '.title', default: model_class.model_name.human.pluralize.titleize
 %table.table.table-striped
   %tbody
     - @contest_requests.each do |contest_request|
       %tr
         %td= link_to contest_request.contest_title, edit_contest_request_path(contest_request)
-        %td
-          = link_to t('.edit', default: t("helpers.links.edit")), edit_contest_request_path(contest_request), class: 'btn btn-mini'
-          = link_to t('.destroy', default: t("helpers.links.destroy")), contest_request_path(contest_request), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-mini btn-danger'
+        %td{ style: "text-align: right" }
+          = link_to t('.edit', default: t("helpers.links.edit")), edit_contest_request_path(contest_request), class: 'btn btn-warning'
+          = link_to t('.destroy', default: t("helpers.links.destroy")), contest_request_path(contest_request), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-danger'
 = link_to t('.new', default: t(".new")), new_contest_request_path, class: 'btn btn-primary'
