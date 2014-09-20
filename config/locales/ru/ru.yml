@@ -27,6 +27,9 @@ ru:
     sessions:
       new:
         title: Авторизация
+    hints:
+      show:
+        title: Подсказки к разделам заявки
     user:
       contest_requests:
         index:
@@ -59,3 +62,5 @@ ru:
     navbar:
       see_contest_requests: Посмотреть свои конкурсные заявки
       new_contest_requests: Создать новую заявку
+      grants: Гранты
+      library: Библиотека

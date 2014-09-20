@@ -40,11 +40,14 @@ ActiveRecord::Schema.define(:version => 20140920011737) do
   end
 
   create_table "experts", :force => true do |t|
+    t.text     "first_name"
+    t.text     "middle_name"
+    t.text     "last_name"
     t.text     "job"
     t.text     "post"
     t.text     "degree"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
   end
 

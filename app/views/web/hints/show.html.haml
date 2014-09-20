@@ -2,9 +2,8 @@
 - model_class = Hint
 .page-header
   %h1=t '.title'
-.row-fluid
-  .span3
-    %ul.nav.nav-pills.nav-stacked.hints_nav
-      != hints_links(@hints)
-  .span9
-    != @hint.body
+.col-lg-3
+  %ul.nav.nav-pills.nav-stacked.hints_nav
+    != hints_links(@hints)
+.col-lg-9
+  != @hint.body
