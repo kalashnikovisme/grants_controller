@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :hint do
-    subject "MyText"
-    body "MyText"
-    lead "MyText"
+    subject { generate :string }
+    body { generate :string }
+    lead { generate :string }
   end
 end
