@@ -17,3 +17,8 @@ ru:
       experts:
         index:
           title: Эксперты
+  layouts:
+    admin:
+      edit_help: Материалы
+      fonds: Фонды
+      people: Люди

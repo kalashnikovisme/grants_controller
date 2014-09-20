@@ -18,6 +18,7 @@ ru:
       users: Пользователи
       helps: Справка
       contest_requests: Заявки на грант
+      hints: Подсказки
     app:
       admin_panel: Админка
       sign_out: Выйти

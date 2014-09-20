@@ -5,11 +5,27 @@
     .navbar.navbar-default
       .container-fluid
         %ul.nav.navbar-nav.navbar-right
-          %li= link_to t('helpers.logic.grant_operators'), admin_grant_operators_path
-          %li= link_to t('helpers.logic.contests'), admin_contests_path
-          %li= link_to t('helpers.logic.helps'), admin_helps_path
-          %li= link_to t('helpers.logic.experts'), admin_experts_path
-          %li= link_to t('helpers.logic.users'), admin_users_path
+          %li.dropdown
+            %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+              = t('.fonds')
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to t('helpers.logic.grant_operators'), admin_grant_operators_path
+              %li= link_to t('helpers.logic.contests'), admin_contests_path
+          %li.dropdown
+            %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+              = t('.edit_help')
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to t('helpers.logic.hints'), admin_hints_path
+              %li= link_to t('helpers.logic.helps'), admin_helps_path
+          %li.dropdown
+            %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+              = t('.people')
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to t('helpers.logic.experts'), admin_experts_path
+              %li= link_to t('helpers.logic.users'), admin_users_path
           %li= link_to t('helpers.app.admin_panel'), admin_path
           %li= link_to t('helpers.app.sign_out'), session_path, method: :delete
     .admin_container
