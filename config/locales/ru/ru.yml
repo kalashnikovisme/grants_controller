@@ -38,6 +38,7 @@ ru:
           title: Редактировать заявку на конкурс
         form:
           commit: Сохранить
+          read_more: Читать далее
   placeholders:
     admin:
       grant_operator:
