@@ -47,3 +47,8 @@ ru:
         plan: Календарный план
         estimates: Смета расходов
         contest_title: Название конкурса
+      hint:
+        subject: к чему
+        body: текст подсказки
+        lead: краткая подсказка
+        created_at: Дата создания

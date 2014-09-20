@@ -17,3 +17,11 @@ ru:
       experts:
         index:
           title: Эксперты
+      hints:
+        index:
+          title: Подсказки
+  layouts:
+    admin:
+      edit_help: Материалы
+      fonds: Фонды
+      people: Люди

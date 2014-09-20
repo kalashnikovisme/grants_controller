@@ -1,0 +1,5 @@
+= title
+- model_class = Hint
+.page-header
+  %h1=t '.title', default: [:'helpers.titles.new', 'Новый %{model}'], model: model_class.model_name.human.titleize
+= render partial: "form", locals: { action: "create" }

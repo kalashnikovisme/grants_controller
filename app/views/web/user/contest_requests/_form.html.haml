@@ -3,27 +3,27 @@
     - f.with_options input_html: { class: "col-lg-9", "data-container" => "body", "data-toggle" => "popover", "data-placement" => "right" }, label_html: { class: "col-lg-3 control-label"}, error_html: { class: "help-block" } do |f|
       %fieldset
         .form-group
-          = f.input :contest_title, input_html: { "data-content" => "Здесь будет короткая подсказка по разделу заявку + <a href = '/'>ссылка на подробную информацию</a>." }, as: :string
+          = f.input :contest_title, as: :string
         .form-group
-          = f.input :goal, input_html: { "data-content" => "Здесь будет короткая подсказка по разделу заявку + <a href = '/'>ссылка на подробную информацию</a>." }
+          = f.input :goal, input_html: { "data-content" => popover_for_this_attribute(:goal) }
         .form-group
-          = f.input :tasks
+          = f.input :tasks, input_html: { "data-content" => popover_for_this_attribute(:tasks) }
         .form-group
-          = f.input :annotation
+          = f.input :annotation, input_html: { "data-content" => popover_for_this_attribute(:annotation) }
         .form-group
-          = f.input :problem
+          = f.input :problem, input_html: { "data-content" => popover_for_this_attribute(:problem) }
         .form-group
-          = f.input :audience
+          = f.input :audience, input_html: { "data-content" => popover_for_this_attribute(:audience) }
         .form-group
-          = f.input :real_methods
+          = f.input :real_methods, input_html: { "data-content" => popover_for_this_attribute(:real_methods) }
         .form-group
-          = f.input :results
+          = f.input :results, input_html: { "data-content" => popover_for_this_attribute(:results) }
         .form-group
-          = f.input :multiplicativity
+          = f.input :multiplicativity, input_html: { "data-content" => popover_for_this_attribute(:multiplicativity) }
         .form-group
-          = f.input :plan
+          = f.input :plan, input_html: { "data-content" => popover_for_this_attribute(:plan) }
         .form-group
-          = f.input :estimates
+          = f.input :estimates, input_html: { "data-content" => popover_for_this_attribute(:estimates) }
         .form-group
           = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
         .form-group
