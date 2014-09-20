@@ -5,6 +5,4 @@ class Hint < ActiveRecord::Base
 
   validates :subject, presence: true,
                       uniqueness: true
-  validates :body, presence: true
-  validates :lead, presence: true
 end
