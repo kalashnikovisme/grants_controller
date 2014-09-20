@@ -12,6 +12,7 @@ GrantsController::Application.routes.draw do
       resources :users, except: :show
       resources :helps, except: :show
       resources :grant_operators, except: :show
+      resources :hints, except: :show
     end
     scope module: :user do
       resources :contest_requests, except: :show
