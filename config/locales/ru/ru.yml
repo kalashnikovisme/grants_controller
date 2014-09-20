@@ -27,6 +27,9 @@ ru:
     sessions:
       new:
         title: Авторизация
+    hints:
+      show:
+        title: Подсказки к разделам заявки
     user:
       contest_requests:
         index:
