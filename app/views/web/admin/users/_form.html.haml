@@ -1,14 +1,22 @@
-= simple_form_for @user, url: { controller: 'web/admin/users', action: action }, html: { class: 'form-horizontal' } do |f|
-  - f.with_options input_html: { class: :span6 } do |f|
-    = f.input :email, as: :string
-    = f.input :role
-    = f.input :first_name, as: :string, input_html: { value: @user.first_name }
-    = f.input :middle_name, as: :string, input_html: { value: @user.middle_name }
-    = f.input :last_name, as: :string, input_html: { value: @user.last_name }
-    = f.label :avatar
-    - if @user.avatar.present?
-      = image_tag @user.avatar.thumb
-    = f.file_field :avatar
-  .form-actions
-    = f.button :submit, class: 'btn-primary'
-    = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'
+.form
+  = simple_form_for @user, url: { controller: 'web/admin/users', action: action }, html: { class: 'form-horizontal' } do |f|
+    - f.with_options input_html: { class: "col-lg-9" }, label_html: { class: "col-lg-3 control-label" }, error_html: { class: "help-block" } do |f|
+      %fieldset
+        .form-group
+          = f.input :email, as: :string
+        .form-group
+          = f.input :role, input_html: { class: "col-lg-9 form-control" }
+        .form-group
+          = f.input :first_name, as: :string, input_html: { value: @user.first_name }
+        .form-group
+          = f.input :middle_name, as: :string, input_html: { value: @user.middle_name }
+        .form-group
+          = f.input :last_name, as: :string, input_html: { value: @user.last_name }
+        .form-group
+          = f.label :avatar
+          - if @user.avatar.present?
+            = image_tag @user.avatar.thumb
+          = f.file_field :avatar
+        .form-group
+          = f.button :submit, class: 'btn btn-primary'
+          = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'
