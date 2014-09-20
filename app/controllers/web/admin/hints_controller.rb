@@ -1,6 +1,6 @@
 class Web::Admin::HintsController < Web::Admin::ApplicationController
   def index
-    @hints = HintDecorator.decorate_collection Hint.all.reverse
+    @hints = Hint.all.reverse
   end
 
   def new
