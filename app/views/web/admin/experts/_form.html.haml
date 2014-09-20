@@ -1,9 +1,15 @@
-= simple_form_for @expert, url: { controller: 'web/admin/experts', action: action }, html: { class: 'form-horizontal' } do |f|
-  - f.with_options input_html: { class: :span6 } do |f|
-    = f.input :job, as: :string
-    = f.input :post, as: :string
-    = f.input :degree
-    = f.association :user, collection: users_can_experts, label_method: lambda { |user| "#{user.first_name} #{user.middle_name} #{user.last_name}" }, value_method: :id
-  .form-actions
-    = f.button :submit, class: 'btn btn-primary'
-    = link_to t('.cancel', default: t("helpers.links.cancel")), admin_experts_path, class: 'btn'
+.form
+  = simple_form_for @expert, url: { controller: 'web/admin/experts', action: action }, html: { class: 'form-horizontal' } do |f|
+    - f.with_options input_html: { class: "col-lg-9" }, label_html: { class: "col-lg-3 control-label" }, error_html: { class: "help-block" } do |f|
+      %fieldset
+        .form-group
+          = f.input :job, as: :string
+        .form-group
+          = f.input :post, as: :string
+        .form-group
+          = f.input :degree, input_html: { class: "col-lg-9 form-control" }
+        .form-group
+          = f.association :user, collection: users_can_experts, label_method: lambda { |user| "#{user.first_name} #{user.middle_name} #{user.last_name}" }, value_method: :id, input_html: { class: "col-lg-9 form-control" }
+        .form-group
+          = f.button :submit, class: 'btn btn-primary'
+          = link_to t('.cancel', default: t("helpers.links.cancel")), admin_experts_path, class: 'btn'
