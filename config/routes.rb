@@ -3,6 +3,7 @@ GrantsController::Application.routes.draw do
   scope module: :web do
     resources :contests, only: :index
     resources :helps, only: :show
+    resources :hints, only: :show
     resource :session, only: [ :new, :create, :destroy ]
     resources :grant_operators, only: :index
     resources :users, only: [ :new, :create ]

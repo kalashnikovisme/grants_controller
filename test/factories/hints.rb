@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :hint do
     subject "MyText"
     body "MyText"
+    lead "MyText"
   end
 end
