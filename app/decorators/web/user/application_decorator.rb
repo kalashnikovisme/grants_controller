@@ -1,4 +1,4 @@
-class Web::UserDecorator < Draper::Decorator
+class Web::User::ApplicationDecorator < Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through

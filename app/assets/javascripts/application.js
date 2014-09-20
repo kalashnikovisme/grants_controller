@@ -12,3 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree .
+
+$(document).ready(function(){
+  $('textarea.text').popover({
+    html: true,
+    content: function() {
+      return $(this).attr('data-content');
+    }
+  });
+});

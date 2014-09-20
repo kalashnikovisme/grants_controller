@@ -1,0 +1,31 @@
+.form
+  = simple_form_for @contest_request, url: { controller: 'web/user/contest_requests', action: action }, html: { class: 'form-horizontal' } do |f|
+    - f.with_options input_html: { class: "col-lg-9", "data-container" => "body", "data-toggle" => "popover", "data-placement" => "right" }, label_html: { class: "col-lg-3 control-label"}, error_html: { class: "help-block" } do |f|
+      %fieldset
+        .form-group
+          = f.input :contest_title, input_html: { "data-content" => "Здесь будет короткая подсказка по разделу заявку + <a href = '/'>ссылка на подробную информацию</a>." }, as: :string
+        .form-group
+          = f.input :goal, input_html: { "data-content" => "Здесь будет короткая подсказка по разделу заявку + <a href = '/'>ссылка на подробную информацию</a>." }
+        .form-group
+          = f.input :tasks
+        .form-group
+          = f.input :annotation
+        .form-group
+          = f.input :problem
+        .form-group
+          = f.input :audience
+        .form-group
+          = f.input :real_methods
+        .form-group
+          = f.input :results
+        .form-group
+          = f.input :multiplicativity
+        .form-group
+          = f.input :plan
+        .form-group
+          = f.input :estimates
+        .form-group
+          = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+        .form-group
+          = f.button :submit, t('helpers.links.save'), class: 'btn btn-primary'
+          = link_to t('.cancel', default: t("helpers.links.cancel")), contest_requests_path, class: 'btn btn-default'
