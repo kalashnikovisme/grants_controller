@@ -22,6 +22,6 @@ ru:
           title: Подсказки
   layouts:
     admin:
-      edit_help: Материалы
-      fonds: Фонды
+      edit_help: Библиотека
+      fonds: Гранты
       people: Люди
