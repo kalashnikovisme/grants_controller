@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
                   :last_name,
                   :avatar
 
-  has_many :experts
+  has_one :experts
+  has_many :requests
 
   has_secure_password
 

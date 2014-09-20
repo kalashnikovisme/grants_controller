@@ -35,3 +35,20 @@ ru:
         avatar: Аватар
         password_confirmation: Подтверждение пароля
         password: Пароль
+      contest_request:
+        goal: Цель проекта
+        tasks: Задачи проекта
+        annotation: Аннотация
+        problem: Проблематика и актуальность
+        audience: Целевая аудитория
+        real_methods: Методы реализации проекта
+        results: Результаты проекта
+        multiplicativity: Мультипликативность проекта
+        plan: Календарный план
+        estimates: Смета расходов
+        contest_title: Название конкурса
+      hint:
+        subject: к чему
+        body: текст подсказки
+        lead: краткая подсказка
+        created_at: Дата создания

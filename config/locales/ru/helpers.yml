@@ -10,12 +10,15 @@ ru:
       new: Новый
       edit: Изменить
       destroy: Удалить
+      save: Сохранить
     logic:
       grant_operators: Грантооператоры
       contests: Конкурсы
       experts: Эксперты
       users: Пользователи
       helps: Справка
+      contest_requests: Заявки на грант
+      hints: Подсказки
     app:
       admin_panel: Админка
       sign_out: Выйти

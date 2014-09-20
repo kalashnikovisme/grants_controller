@@ -1,0 +1,31 @@
+.form
+  = simple_form_for @contest_request, url: { controller: 'web/user/contest_requests', action: action }, html: { class: 'form-horizontal' } do |f|
+    - f.with_options input_html: { class: "col-lg-9", "data-container" => "body", "data-toggle" => "popover", "data-placement" => "right" }, label_html: { class: "col-lg-3 control-label"}, error_html: { class: "help-block" } do |f|
+      %fieldset
+        .form-group
+          = f.input :contest_title, as: :string
+        .form-group
+          = f.input :goal, input_html: { "data-content" => popover_for_this_attribute(:goal) }
+        .form-group
+          = f.input :tasks, input_html: { "data-content" => popover_for_this_attribute(:tasks) }
+        .form-group
+          = f.input :annotation, input_html: { "data-content" => popover_for_this_attribute(:annotation) }
+        .form-group
+          = f.input :problem, input_html: { "data-content" => popover_for_this_attribute(:problem) }
+        .form-group
+          = f.input :audience, input_html: { "data-content" => popover_for_this_attribute(:audience) }
+        .form-group
+          = f.input :real_methods, input_html: { "data-content" => popover_for_this_attribute(:real_methods) }
+        .form-group
+          = f.input :results, input_html: { "data-content" => popover_for_this_attribute(:results) }
+        .form-group
+          = f.input :multiplicativity, input_html: { "data-content" => popover_for_this_attribute(:multiplicativity) }
+        .form-group
+          = f.input :plan, input_html: { "data-content" => popover_for_this_attribute(:plan) }
+        .form-group
+          = f.input :estimates, input_html: { "data-content" => popover_for_this_attribute(:estimates) }
+        .form-group
+          = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+        .form-group
+          = f.button :submit, t('helpers.links.save'), class: 'btn btn-primary'
+          = link_to t('.cancel', default: t("helpers.links.cancel")), contest_requests_path, class: 'btn btn-default'
