@@ -5,6 +5,8 @@
         .form-group
           = f.input :subject, as: :string, placeholder: t('placeholders.admin.hint.subject')
         .form-group
+          = f.input :lead, placeholder: t('placeholders.admin.hint.lead')
+        .form-group
           = f.input :body, placeholder: t('placeholders.admin.hint.body')
         .form-group
           = f.button :submit, class: 'btn btn-primary'
