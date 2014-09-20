@@ -4,6 +4,13 @@
   %body{ style: "background-color: white" }
     .navbar.navbar-default
       .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", type: "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{ href: root_path }
+            = t('project_attributes.name')
         %ul.nav.navbar-nav.navbar-right
           %li.dropdown
             %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
