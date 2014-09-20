@@ -5,6 +5,7 @@ class Web::User::ContestRequestsController < Web::User::ApplicationController
 
   def new
     @contest_request = ContestRequest.new
+    @hints = Hint.all
   end
 
   def edit
