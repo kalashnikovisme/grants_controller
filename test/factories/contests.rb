@@ -4,5 +4,6 @@ FactoryGirl.define do
     title { generate :string }
     description { generate :string }
     link { generate :url }
+    end_date { generate :date }
   end
 end

@@ -60,4 +60,8 @@ FactoryGirl.define do
   sequence :url do |n|
     "http://mysite{n}"
   end
+
+  sequence :date do
+    DateTime.now
+  end
 end
