@@ -2,19 +2,14 @@
 - model_class = Contest
 .page-header
   %h1=t '.title'
-- while @contests.any?
-  - contests_row = @contests.slice!(0..3)
-  .row-fluid.contest_row
-    - contests_row.each do |contest|
-      .contest_cell.span3
-        .contest_cell_title
-          = link_to contest.link, class: :link_button do
-            .text
-              %h4
-                = contest.title
-        .contest_cell_description
-          = contest.lead
-        .contest_cell_operator.link_button
-          = link_to contest.grant_operator.url, class: :link_button do
-            .text
-              = contest.grant_operator.title
+#tabs
+  .col-lg-3
+    %ul.nav.nav-pills.nav-stacked.helps_nav
+      %li
+        = link_to t('.actual_contests'), "#actual", id: "#actual_link"
+      %li
+        = link_to t('.old_contests'), "#old", id: "#old_link"
+  #actual.col-lg-9
+    aaaaa
+  #old.col-lg-9
+    hui naa
