@@ -28,4 +28,4 @@ pickle-email-*.html
 /config/application.yml
 
 #Ignore glyphicons icons in public
-public/glyphicons
+public
