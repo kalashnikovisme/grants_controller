@@ -1,8 +1,10 @@
 class Contest < ActiveRecord::Base
+  include ContestRepository
   attr_accessible :description,
                   :link,
                   :title,
-                  :grant_operator_id
+                  :grant_operator_id,
+                  :end_date
 
   belongs_to :grant_operator
 
@@ -10,4 +12,5 @@ class Contest < ActiveRecord::Base
   validates :link, presence: true, url: true
   validates :title, presence: true
   validates :grant_operator_id, presence: true
+  validates :end_date, presence: true
 end
