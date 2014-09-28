@@ -1,0 +1,9 @@
+= title @contest.title
+%ul.nav.nav-pills
+  %li
+    = link_to contests_path do
+      %span.glyphicon.back
+      = t('.helpers.logic.contests')
+  .nav-pills-header
+    .navbar-brand
+      = @contest.title
