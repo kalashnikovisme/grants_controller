@@ -18,6 +18,8 @@ ru:
     contests:
       index:
         title: Грантовые конкурсы
+      show:
+        source: Источник
     helps:
       show:
         title: Справка
