@@ -14,7 +14,7 @@ ru:
       contest:
         title: Название
         description: Описание
-        link: Ссылка
+        link: Ссылка на страницу конкурса
         grant_operator: Грантооператор
         end_date: Дата окончания
         created_at: Дата создания

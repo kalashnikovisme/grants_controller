@@ -26,3 +26,6 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
+
+#Ignore glyphicons icons in public
+public/glyphicons
