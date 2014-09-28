@@ -8,5 +8,6 @@ bundle
 rake db:migrate
 rails generate figaro:install
 rake secret
+cp app/assets/images/glyphicons/ public/
 ```
 copy secret_token to config/application.yml
