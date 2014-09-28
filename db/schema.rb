@@ -71,22 +71,6 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.text     "lead"
   end
 
-  create_table "requests", :force => true do |t|
-    t.text     "goal"
-    t.text     "tasks"
-    t.text     "annotation"
-    t.text     "problem"
-    t.text     "audience"
-    t.text     "real_methods"
-    t.text     "results"
-    t.text     "multiplicativity"
-    t.text     "plan"
-    t.text     "estimates"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "user_id"
-  end
-
   create_table "users", :force => true do |t|
     t.text     "email"
     t.text     "password_digest"

@@ -1,15 +1,15 @@
 = title t('helpers.logic.contests')
 - model_class = Contest
-.page-header
-  %h1=t '.title'
 #tabs
-  .col-lg-3
-    %ul.nav.nav-pills.nav-stacked.helps_nav
-      %li
-        = link_to t('helpers.logic.actual_contests'), "#actual", id: "#actual_link"
-      %li
-        = link_to t('helpers.logic.old_contests'), "#old", id: "#old_link"
-  #actual.col-lg-9
-    = render 'actual'
-  #old.col-lg-9
-    = render 'old'
+  %ul.nav.nav-pills
+    .nav-pills-header
+      .navbar-brand{ href: root_path }
+        = t('.title')
+    %li
+      = link_to t('helpers.logic.actual_contests'), "#actual", id: "#actual_link"
+    %li
+      = link_to t('helpers.logic.old_contests'), "#old", id: "#old_link"
+  #actual
+    = render partial: "table", locals: { contests: @actual_contests }
+  #old
+    = render partial: "table", locals: { contests: @old_contests }
