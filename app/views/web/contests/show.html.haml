@@ -25,4 +25,14 @@
   %h4
     = t('activerecord.attributes.contest.description')
   = @contest.description
+.grant_operator_info
+  .grant_operator_info_title
+    %span.glyphicon.building
+    = link_to grant_operators_path do
+      %h4
+        = @contest.grant_operator.title
+  .grant_operator_info_stat
+    %span.glyphicon.list
+    %h4
+      = @contest.grant_operator.contests.count
 
