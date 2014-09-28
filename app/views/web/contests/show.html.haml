@@ -10,7 +10,7 @@
   %li.date
     %span.glyphicon.calendar{ style: "margin-top: 5px" }
     .date-text
-      = @contest.end_date.strftime("%d %b %Y")
+      =l @contest.end_date, format: "%d %b %Y"
   %li.link.dropdown
     %a.dropdown-toggle{ href: "#", "data-toggle" => :dropdown }
       %span.glyphicon.link
