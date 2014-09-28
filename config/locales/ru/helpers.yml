@@ -19,6 +19,8 @@ ru:
       helps: Справка
       contest_requests: Заявки на грант
       hints: Подсказки
+      actual_contests: Актуальные конкурсы
+      old_contests: Прошедшие конкурсы
     app:
       admin_panel: Админка
       sign_out: Выйти

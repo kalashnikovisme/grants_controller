@@ -6,10 +6,10 @@
   .col-lg-3
     %ul.nav.nav-pills.nav-stacked.helps_nav
       %li
-        = link_to t('.actual_contests'), "#actual", id: "#actual_link"
+        = link_to t('helpers.logic.actual_contests'), "#actual", id: "#actual_link"
       %li
-        = link_to t('.old_contests'), "#old", id: "#old_link"
+        = link_to t('helpers.logic.old_contests'), "#old", id: "#old_link"
   #actual.col-lg-9
-    aaaaa
+    = render 'actual'
   #old.col-lg-9
-    hui naa
+    = render 'old'
