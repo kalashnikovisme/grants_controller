@@ -1,4 +1,5 @@
 class Contest < ActiveRecord::Base
+  include ContestRepository
   attr_accessible :description,
                   :link,
                   :title,
