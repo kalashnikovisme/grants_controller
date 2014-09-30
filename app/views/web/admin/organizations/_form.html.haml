@@ -7,5 +7,7 @@
         .form-group
           = f.input :url, as: :string, placeholder: t('placeholders.admin.organization.url')
         .form-group
+          = f.input :org_type, input_html: { class: "col-lg-9 form-control" }
+        .form-group
           = f.button :submit, class: 'btn btn-primary'
           = link_to t('.cancel', default: t("helpers.links.cancel")), admin_organizations_path, class: 'btn'

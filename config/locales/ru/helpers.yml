@@ -12,7 +12,7 @@ ru:
       destroy: Удалить
       save: Сохранить
     logic:
-      organizations: Грантооператоры
+      organizations: Организации
       contests: Конкурсы
       experts: Эксперты
       users: Пользователи

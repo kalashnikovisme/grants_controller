@@ -1,7 +1,7 @@
 ru:
   activerecord:
     models:
-      organization: Грантооператор
+      organization: Организация
       user: Пользователь
       contest: Конкурс
       help: Справка
@@ -10,12 +10,13 @@ ru:
       organization:
         title: Название
         url: URL
+        org_type: Тип организации
         created_at: Дата создания
       contest:
         title: Название
         description: Описание
         link: Ссылка на страницу конкурса
-        organization: Грантооператор
+        organization: Организация
         end_date: Дата окончания
         created_at: Дата создания
       help:

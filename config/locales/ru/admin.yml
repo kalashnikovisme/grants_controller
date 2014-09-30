@@ -4,7 +4,7 @@ ru:
       panel: Админка
       organizations:
         index:
-          title: Грантооператоры
+          title: Организации
       contests:
         index:
           title: Конкурсы
