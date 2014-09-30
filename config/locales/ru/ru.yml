@@ -46,7 +46,7 @@ ru:
           read_more: Читать далее
   placeholders:
     admin:
-      grant_operator:
+      organization:
         title: Следует использовать сокращённое название
         url: Адрес официального сайта организации
       contest:

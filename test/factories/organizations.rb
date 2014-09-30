@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :grant_operator do
+  factory :organization do
     title
     url
   end
