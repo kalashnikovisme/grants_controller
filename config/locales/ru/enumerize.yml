@@ -4,3 +4,7 @@ ru:
       role:
         default_user: Обыкновенный пользователь
         admin: Администратор
+    organization:
+      org_type:
+        grantor: Грантодатель
+        grant_operator: Грантооператор

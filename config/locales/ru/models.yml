@@ -1,21 +1,22 @@
 ru:
   activerecord:
     models:
-      grant_operator: Грантооператор
+      organization: Организация
       user: Пользователь
       contest: Конкурс
       help: Справка
       expert: Эксперт
     attributes:
-      grant_operator:
+      organization:
         title: Название
         url: URL
+        org_type: Тип организации
         created_at: Дата создания
       contest:
         title: Название
         description: Описание
         link: Ссылка на страницу конкурса
-        grant_operator: Грантооператор
+        organization: Организация
         end_date: Дата окончания
         created_at: Дата создания
       help:

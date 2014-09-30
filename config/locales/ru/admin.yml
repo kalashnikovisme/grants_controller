@@ -2,15 +2,15 @@ ru:
   web:
     admin:
       panel: Админка
-      grant_operators:
+      organizations:
         index:
-          title: Грантооператоры
+          title: Организации
       contests:
         index:
           title: Конкурсы
         form:
-          if_there_is_not_grant_operator: "Если грантооператор отсутствует, добавьте его"
-          add_grant_operator: Добавить грантооператора
+          if_there_is_not_organization: "Если грантооператор отсутствует, добавьте его"
+          add_organization: Добавить грантооператора
       helps:
         index:
           title: Справка

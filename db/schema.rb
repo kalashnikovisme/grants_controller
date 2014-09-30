@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.text     "title"
     t.text     "description"
     t.text     "link"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.integer  "grant_operator_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "organization_id"
     t.datetime "end_date"
   end
 
@@ -47,13 +47,6 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
-  end
-
-  create_table "grant_operators", :force => true do |t|
-    t.text     "title"
-    t.text     "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "helps", :force => true do |t|
@@ -69,6 +62,14 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.text     "lead"
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.text     "title"
+    t.text     "url"
+    t.text     "org_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
