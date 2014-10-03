@@ -1,18 +1,18 @@
 = title t('helpers.logic.organizations')
 - model_class = Organization
-.page-header
-  %h1=t '.title', default: model_class.model_name.human.pluralize.titleize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:title)
-      %th= model_class.human_attribute_name(:url)
-      %th= model_class.human_attribute_name(:created_at)
-  %tbody
-    - @organizations.each do |organization|
-      %tr
-        %td= organization.id
-        %td= organization.title
-        %td= link_to organization.url, organization.url
-        %td=l organization.created_at
+%ul.nav.nav-pills
+  .nav-pills-header
+    .navbar-brand
+      = t('.title')
+%ul.organizations-grid.cf
+  - @organizations.each do |organization|
+    %li
+      .organization
+        = link_to organizations_path(organization) do
+          = image_tag organization.logo.thumb
+        .organization_footer.cf
+          = link_to organization.title
+          .badges
+            %span.glyphicon.mini{ class: org_type_class(organization) }
+            %span.glyphicon.mini.list
+            = organization.contests.count

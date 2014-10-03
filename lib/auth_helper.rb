@@ -26,6 +26,8 @@ module AuthHelper
 
   #Admin auth
   def admin_signed_in?
-    signed_in? && current_user.role.admin?
+    if signed_in?
+      current_user.role.admin?
+    end
   end
 end
