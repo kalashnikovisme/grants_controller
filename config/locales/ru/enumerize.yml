@@ -8,3 +8,11 @@ ru:
       org_type:
         grantor: Грантодатель
         grant_operator: Грантооператор
+    contest:
+      subject:
+        volunteering: Волонтёрство
+        leadership: Лидерство
+        innovation: Инновации
+        agriculture: Сельское хозяйство
+        science: Наука
+        other: Другое

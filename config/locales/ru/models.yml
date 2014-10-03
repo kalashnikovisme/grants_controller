@@ -19,6 +19,7 @@ ru:
         organization: Организация
         end_date: Дата окончания
         created_at: Дата создания
+        subject: Тематика
       help:
         title: Название раздела
         body: Гипертекстовая начинка

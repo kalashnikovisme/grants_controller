@@ -4,7 +4,8 @@ class Contest < ActiveRecord::Base
                   :link,
                   :title,
                   :organization_id,
-                  :end_date
+                  :end_date,
+                  :subject
 
   belongs_to :organization
 
@@ -13,4 +14,13 @@ class Contest < ActiveRecord::Base
   validates :title, presence: true
   validates :organization_id, presence: true
   validates :end_date, presence: true
+  validates :subject, presence: true
+
+  extend Enumerize
+  enumerize :subject, in: [ :volunteering,
+                            :leadership,
+                            :innovation,
+                            :agriculture,
+                            :science,
+                            :other ]
 end
