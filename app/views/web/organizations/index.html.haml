@@ -1,9 +1,15 @@
 = title t('helpers.logic.organizations')
 - model_class = Organization
-%ul.nav.nav-pills
+%ul.nav.nav-pills.organization_nav
   .nav-pills-header
     .navbar-brand
       = t('.title')
+  %li
+    %span.glyphicon.ruble
+    = t('helpers.logic.grantor')
+  %li
+    %span.glyphicon.sort{ style: 'margin-right: 5px' }
+    = t('helpers.logic.grant_operator')
 %ul.organizations-grid.cf
   - @organizations.each do |organization|
     %li

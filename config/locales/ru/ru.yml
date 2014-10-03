@@ -44,6 +44,9 @@ ru:
         form:
           commit: Сохранить
           read_more: Читать далее
+    organizations:
+      index:
+        title: Грантовые организации
   placeholders:
     admin:
       organization:

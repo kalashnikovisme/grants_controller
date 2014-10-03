@@ -21,6 +21,8 @@ ru:
       hints: Подсказки
       actual_contests: Актуальные конкурсы
       old_contests: Прошедшие конкурсы
+      grant_operator: Грантооператор
+      grantor: Грантодатель
     app:
       admin_panel: Админка
       sign_out: Выйти
