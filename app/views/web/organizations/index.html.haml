@@ -1,0 +1,18 @@
+= title t('helpers.logic.organizations')
+- model_class = Organization
+%ul.nav.nav-pills
+  .nav-pills-header
+    .navbar-brand
+      = t('.title')
+%ul.organizations-grid.cf
+  - @organizations.each do |organization|
+    %li
+      .organization
+        = link_to organizations_path(organization) do
+          = image_tag organization.logo.thumb
+        .organization_footer.cf
+          = link_to organization.title
+          .badges
+            %span.glyphicon.mini{ class: org_type_class(organization) }
+            %span.glyphicon.mini.list
+            = organization.contests.count
