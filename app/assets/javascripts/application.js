@@ -14,7 +14,14 @@
 //= require jquery_ujs
 //= require_tree .
 
+function hide_popover() {
+  $('.popover').fadeOut(300);
+}
+
 $(document).ready(function(){
+  $('textarea.text').click(function(){
+    hide_popover();
+  });
   $('textarea.text').popover({
     html: true,
     content: function() {
