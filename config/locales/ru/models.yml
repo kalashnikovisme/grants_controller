@@ -49,6 +49,7 @@ ru:
         plan: Календарный план
         estimates: Смета расходов
         contest_title: Название конкурса
+        contest_url: Ссылка на страницу конкурса
       hint:
         subject: к чему
         body: текст подсказки

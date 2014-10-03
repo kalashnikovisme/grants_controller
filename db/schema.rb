@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140930223418) do
+ActiveRecord::Schema.define(:version => 20141003121132) do
 
   create_table "contest_requests", :force => true do |t|
     t.text     "goal"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20140930223418) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.text     "contest_title"
+    t.text     "contest_url"
   end
 
   create_table "contests", :force => true do |t|
