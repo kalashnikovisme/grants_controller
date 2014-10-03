@@ -5,6 +5,8 @@ ru:
       organizations:
         index:
           title: Организации
+        form:
+          logo_must_be_200_x_200_on_bigger: Лого должно быть 200 x 200 пикселей или больше
       contests:
         index:
           title: Конкурсы
