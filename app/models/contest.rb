@@ -22,5 +22,6 @@ class Contest < ActiveRecord::Base
                             :innovation,
                             :agriculture,
                             :science,
-                            :other ]
+                            :other ],
+                      default: :other
 end
