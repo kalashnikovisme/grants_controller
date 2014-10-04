@@ -5,6 +5,8 @@
         .form-group
           = f.input :contest_title, as: :string
         .form-group
+          = f.input :contest_url, as: :string
+        .form-group
           = f.input :goal, input_html: { "data-content" => popover_for_this_attribute(:goal) }
         .form-group
           = f.input :tasks, input_html: { "data-content" => popover_for_this_attribute(:tasks) }

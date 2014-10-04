@@ -3,14 +3,25 @@ class Contest < ActiveRecord::Base
   attr_accessible :description,
                   :link,
                   :title,
-                  :grant_operator_id,
-                  :end_date
+                  :organization_id,
+                  :end_date,
+                  :subject
 
-  belongs_to :grant_operator
+  belongs_to :organization
 
   validates :description, presence: true
   validates :link, presence: true, url: true
   validates :title, presence: true
-  validates :grant_operator_id, presence: true
+  validates :organization_id, presence: true
   validates :end_date, presence: true
+  validates :subject, presence: true
+
+  extend Enumerize
+  enumerize :subject, in: [ :volunteering,
+                            :leadership,
+                            :innovation,
+                            :agriculture,
+                            :science,
+                            :other ],
+                      default: :other
 end

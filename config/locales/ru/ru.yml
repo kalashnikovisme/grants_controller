@@ -18,6 +18,8 @@ ru:
     contests:
       index:
         title: Грантовые конкурсы
+        all_contests: Все актуальные конкурсы
+        there_is_not_actual_contests_on_subject_now: 'На данный актуальные конкурсы по тематике "%{subject}" отсутствуют'
       show:
         source: Источник
     helps:
@@ -44,9 +46,12 @@ ru:
         form:
           commit: Сохранить
           read_more: Читать далее
+    organizations:
+      index:
+        title: Грантовые организации
   placeholders:
     admin:
-      grant_operator:
+      organization:
         title: Следует использовать сокращённое название
         url: Адрес официального сайта организации
       contest:

@@ -11,10 +11,12 @@
         .form-group
           = f.input :end_date, as: :string, placeholder: t('placeholders.admin.contest.end_date')
         .form-group
-          = f.association :grant_operator, selected: 1, input_html: { class: "col-lg-9 form-control" }
+          = f.input :subject, input_html: { class: "col-lg-9 form-control" }
+        .form-group
+          = f.association :organization, selected: 1, input_html: { class: "col-lg-9 form-control" }
         .form-group.additional_buttons
-          = t('.if_there_is_not_grant_operator')
-          = link_to t('.add_grant_operator'), new_admin_grant_operator_path, class: 'btn btn-default', target: "_blank"
+          = t('.if_there_is_not_organization')
+          = link_to t('.add_organization'), new_admin_organization_path, class: 'btn btn-default', target: "_blank"
         .form-group
           = f.button :submit, class: 'btn btn-primary'
           = link_to t('.cancel', default: t("helpers.links.cancel")), admin_contests_path, class: 'btn'

@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
                   :first_name,
                   :middle_name,
                   :last_name,
-                  :avatar
+                  :avatar,
+                  :avatar_cache
 
   has_one :experts
   has_many :requests

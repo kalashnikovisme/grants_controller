@@ -8,7 +8,7 @@
       %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:title)
       %th= model_class.human_attribute_name(:description)
-      %th= model_class.human_attribute_name(:grant_operator)
+      %th= model_class.human_attribute_name(:organization)
       %th= model_class.human_attribute_name(:end_date)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', default: t("helpers.actions")
@@ -18,7 +18,7 @@
         %td= link_to contest.id, edit_admin_contest_path(contest)
         %td= contest.title
         %td= contest.lead
-        %td= contest.grant_operator.title
+        %td= contest.organization.title
         %td= contest.end_date.strftime("%d %b %Y")
         %td= contest.created_at.strftime("%d %b %Y")
         %td

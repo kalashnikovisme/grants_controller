@@ -2,17 +2,18 @@
 
 FactoryGirl.define do
   factory :contest_request do
-    goal "MyText"
-    tasks "MyText"
-    annotation "MyText"
-    problem "MyText"
-    audience "MyText"
-    real_methods "MyText"
-    results "MyText"
-    multiplicativity "MyText"
-    plan "MyText"
-    estimates "MyText"
-    contest_title "MyText"
+    goal { generate :string }
+    tasks { generate :string }
+    annotation { generate :string }
+    problem { generate :string }
+    audience { generate :string }
+    real_methods { generate :string }
+    results { generate :string }
+    multiplicativity { generate :string }
+    plan { generate :string }
+    estimates { generate :string }
+    contest_title { generate :string }
+    contest_url { generate :url }
     user_id 1
   end
 end

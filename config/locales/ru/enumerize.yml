@@ -4,3 +4,15 @@ ru:
       role:
         default_user: Обыкновенный пользователь
         admin: Администратор
+    organization:
+      org_type:
+        grantor: Грантодатель
+        grant_operator: Грантооператор
+    contest:
+      subject:
+        volunteering: Волонтёрство
+        leadership: Лидерство
+        innovation: Инновации
+        agriculture: Сельское хозяйство
+        science: Наука
+        other: Другое

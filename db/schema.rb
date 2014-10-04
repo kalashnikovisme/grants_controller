@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140926025608) do
+ActiveRecord::Schema.define(:version => 20141003131025) do
 
   create_table "contest_requests", :force => true do |t|
     t.text     "goal"
@@ -28,16 +28,18 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.text     "contest_title"
+    t.text     "contest_url"
   end
 
   create_table "contests", :force => true do |t|
     t.text     "title"
     t.text     "description"
     t.text     "link"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.integer  "grant_operator_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "organization_id"
     t.datetime "end_date"
+    t.text     "subject"
   end
 
   create_table "experts", :force => true do |t|
@@ -47,13 +49,6 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
-  end
-
-  create_table "grant_operators", :force => true do |t|
-    t.text     "title"
-    t.text     "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "helps", :force => true do |t|
@@ -69,6 +64,15 @@ ActiveRecord::Schema.define(:version => 20140926025608) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.text     "lead"
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.text     "title"
+    t.text     "url"
+    t.text     "org_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "logo"
   end
 
   create_table "users", :force => true do |t|

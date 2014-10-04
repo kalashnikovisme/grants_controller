@@ -20,19 +20,19 @@
       %li
         = link_to t('activerecord.attributes.contest.link'), @contest.link, target: "_blank"
       %li
-        = link_to t('activerecord.attributes.contest.grant_operator'), @contest.grant_operator.url, target: "_blank"
+        = link_to t('activerecord.attributes.contest.organization'), @contest.organization.url, target: "_blank"
 .contest_content
   %h4
     = t('activerecord.attributes.contest.description')
   = @contest.description
-.grant_operator_info
-  .grant_operator_info_title
+.organization_info
+  .organization_info_title
     %span.glyphicon.building
-    = link_to grant_operators_path do
+    = link_to organizations_path do
       %h4
-        = @contest.grant_operator.title
-  .grant_operator_info_stat
+        = @contest.organization.title
+  .organization_info_stat
     %span.glyphicon.list
     %h4
-      = @contest.grant_operator.contests.count
+      = @contest.organization.contests.count
 

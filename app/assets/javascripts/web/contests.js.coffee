@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+#= require jquery
+
+$(document).ready ->
+  $('#actual_tabs').tabs()
+  $('#all_link').parents().first().addClass('active')
+  $('#actual_link').click ->
+    $('#all').parents().first().chidren('div').hide()
+    $('#all').show()
+    $('#all_link').parents('ul').first().children('li').removeClass('active')
+    $('#all_link').parents().first().addClass('active')

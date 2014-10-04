@@ -13,10 +13,7 @@
         .form-group
           = f.input :last_name, as: :string, input_html: { value: @user.last_name }
         .form-group
-          = f.label :avatar
-          - if @user.avatar.present?
-            = image_tag @user.avatar.thumb
-          = f.file_field :avatar
+          = f.input :avatar, as: :image_preview, input_html: { preview_version: :thumb }
         .form-group
           = f.button :submit, class: 'btn btn-primary'
           = link_to t('.cancel', default: t("helpers.links.cancel")), admin_users_path, class: 'btn'
