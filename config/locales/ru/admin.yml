@@ -24,6 +24,7 @@ ru:
           title: Подсказки
   layouts:
     admin:
-      edit_help: Библиотека
+      content: Контент
       fonds: Гранты
       people: Люди
+      pages: Страницы

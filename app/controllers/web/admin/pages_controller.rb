@@ -1,6 +1,6 @@
 class Web::Admin::PagesController < Web::Admin::ApplicationController
   def index
-    @pages = Page.all.reverse
+    @pages = PageDecorator.decorate_collection Page.all.reverse
   end
 
   def new

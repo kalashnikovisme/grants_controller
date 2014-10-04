@@ -7,9 +7,9 @@
         .form-group
           = f.input :body, placeholder: t('placeholders.admin.page.body')
         .form-group
-          = f.input :slug, placeholder: t('placeholders.admin.page.slug')
+          = f.input :slug, as: :string, placeholder: t('placeholders.admin.page.slug')
         .form-group
-          = f.input :section, placeholder: t('placeholders.admin.page.section')
+          = f.input :section, input_html: { class: "col-lg-9 form-control" }, placeholder: t('placeholders.admin.page.section')
         .form-group
           = f.button :submit, class: 'btn btn-primary'
           = link_to t('.cancel', default: t("helpers.links.cancel")), admin_pages_path, class: 'btn btn-default'

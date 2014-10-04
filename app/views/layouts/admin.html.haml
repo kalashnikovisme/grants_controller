@@ -21,11 +21,12 @@
               %li= link_to t('helpers.logic.contests'), admin_contests_path
           %li.dropdown
             %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
-              = t('.edit_help')
+              = t('.content')
               %b.caret
             %ul.dropdown-menu
               %li= link_to t('helpers.logic.hints'), admin_hints_path
               %li= link_to t('helpers.logic.helps'), admin_helps_path
+              %li= link_to t('.pages'), admin_pages_path
           %li.dropdown
             %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
               = t('.people')
