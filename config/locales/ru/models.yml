@@ -6,6 +6,7 @@ ru:
       contest: Конкурс
       help: Справка
       expert: Эксперт
+      page: Страница
     attributes:
       organization:
         title: Название
@@ -56,3 +57,11 @@ ru:
         body: текст подсказки
         lead: краткая подсказка
         created_at: Дата создания
+      page:
+        title: Название страницы
+        body: Содержимое страницы
+        slug: Адрес страницы
+        section: Раздел
+    page:
+      section:
+        about: О нас
