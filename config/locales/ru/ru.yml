@@ -14,7 +14,7 @@ ru:
         conditions: Условия
         our_conditions: На данный момент все услуги предоставляются бесплатно
         actual_contests: Актуальные конкурсы
-        helps: Справка
+        how_create_requests: Как написать заявку
     contests:
       index:
         title: Грантовые конкурсы
