@@ -14,3 +14,13 @@ content_request_attributes = [
 content_request_attributes.each do |attr|
   Hint.find_or_create_by_subject attr
 end
+
+helps = [
+                    'Что такое грант?',
+                    'Виды грантов',
+                    'Законодательство РФ в сфере получения грантов'
+]
+
+helps.each do |attr|
+  Help.find_or_create_by_title attr
+end

@@ -23,6 +23,7 @@ ru:
       old_contests: Прошедшие конкурсы
       grant_operator: Грантооператор
       grantor: Грантодатель
+      laboratory: Лаборатория
     app:
       admin_panel: Админка
       sign_out: Выйти

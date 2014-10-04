@@ -14,7 +14,8 @@ ru:
         conditions: Условия
         our_conditions: На данный момент все услуги предоставляются бесплатно
         actual_contests: Актуальные конкурсы
-        helps: Справка
+        how_create_requests: Как написать заявку
+        about_us: О проекте
     contests:
       index:
         title: Грантовые конкурсы
@@ -24,7 +25,7 @@ ru:
         source: Источник
     helps:
       show:
-        title: Справка
+        title: Как правильно написать заявку на грант
     users:
       new:
         title: Регистрация
@@ -66,6 +67,11 @@ ru:
         subject: на какой раздел заявки ориентирована эта подсказка
         body: текст подсказки
         lead: "текст краткой, выплывающей подсказки"
+      page:
+        title: Название страницы
+        body: Содержимое страницы
+        slug: Уникальный адрес страницы
+        section: Раздел
   layouts:
     navbar:
       see_contest_requests: Посмотреть свои конкурсные заявки

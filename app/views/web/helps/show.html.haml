@@ -1,9 +1,9 @@
-= title t('helpers.logic.helps')
+= title
 - model_class = Help
 .page-header
   %h1=t '.title'
 .col-lg-3
   %ul.nav.nav-pills.nav-stacked.helps_nav
     != helps_links(@helps)
-.col-lg-9
+.col-lg-9.help_body
   != @help.body

@@ -16,3 +16,6 @@ ru:
         agriculture: Сельское хозяйство
         science: Наука
         other: Другое
+    page:
+      section:
+        about: О нас
