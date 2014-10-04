@@ -1,6 +1,6 @@
 class Web::Admin::HelpsController < Web::Admin::ApplicationController
   def index
-    @helps = Help.all
+    @helps = HelpDecorator.decorate_collection Help.all
   end
 
   def new

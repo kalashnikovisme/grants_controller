@@ -14,10 +14,10 @@
       %tr
         %td= link_to help.id, edit_admin_help_path(help)
         %td= help.title
-        %td= help.body
+        %td= help.lead
         %td=l help.created_at
         %td
-          = link_to t('.edit', default: t("helpers.links.edit")), edit_admin_help_path(help), class: 'btn btn-mini'
+          = link_to t('.edit', default: t("helpers.links.edit")), edit_admin_help_path(help), class: 'btn btn-warning'
           = link_to t('.destroy', default: t("helpers.links.destroy")), admin_help_path(help), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-mini btn-danger'
 
 = link_to t('.new', default: t("helpers.links.new")), new_admin_help_path, class: 'btn btn-primary'
