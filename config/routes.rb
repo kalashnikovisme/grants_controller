@@ -2,6 +2,11 @@ GrantsController::Application.routes.draw do
   root to: "web/welcome#index"
   scope module: :web do
     resources :contests, only: [ :index, :show ]
+    resources :pages, only: [] do
+      collection do
+        get '/:section' => 'pages#index'
+      end
+    end
     resources :helps, only: :show
     resources :hints, only: :show
     resource :session, only: [ :new, :create, :destroy ]
