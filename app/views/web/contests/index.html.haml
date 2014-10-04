@@ -6,10 +6,24 @@
       .navbar-brand
         = t('.title')
     %li
-      = link_to t('helpers.logic.actual_contests'), "#actual", id: "#actual_link"
+      = link_to t('helpers.logic.actual_contests'), "#actual", id: "actual_link"
     %li
-      = link_to t('helpers.logic.old_contests'), "#old", id: "#old_link"
+      = link_to t('helpers.logic.old_contests'), "#old", id: "old_link"
   #actual
-    = render partial: "table", locals: { contests: @actual_contests }
+    #actual_tabs
+      %ul.nav.nav-pills
+        .nav-pills-header
+          .navbar-brand
+            = t('helpers.logic.actual_contests')
+        %li
+          = link_to t('.all_contests'), '#all', id: 'all_link'
+        - Contest.subject.values.each do |subject|
+          %li
+            = link_to t("enumerize.contest.subject.#{subject}"), "##{subject}", id: "#{subject}_link"
+      #all
+        = render partial: "table", locals: { contests: @actual_contests }
+      - Contest.subject.values.each do |subject|
+        %div{ id: "#{subject}" }
+          = render partial: "table", locals: { contests: contests_of_subject(@actual_contests, subject) }
   #old
     = render partial: "table", locals: { contests: @old_contests }

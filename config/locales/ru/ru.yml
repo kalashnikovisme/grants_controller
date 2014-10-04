@@ -18,6 +18,7 @@ ru:
     contests:
       index:
         title: Грантовые конкурсы
+        all_contests: Все актуальные конкурсы
       show:
         source: Источник
     helps:
