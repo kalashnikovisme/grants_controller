@@ -8,37 +8,21 @@
       = t('project_attributes.name')
   .navbar-collapse.collapse.navbar-responsive-collapse
     %ul.nav.navbar-nav
-      %li.dropdown
-        %a.dropdown-toggle{ href: "#", "data-toggle" => :dropdown }
-          = t('.grants')
-          %b.caret
-        %ul.dropdown-menu
-          %li
-            = link_to t('helpers.logic.contests'), contests_path
-          %li
-            = link_to t('helpers.logic.organizations'), organizations_path
-      %li.dropdown
-        %a.dropdown-toggle{ href: "#", "data-toggle" => :dropdown }
-          = t('.library')
-          %b.caret
-        %ul.dropdown-menu
-          - if any_hints
-            %li
-              = link_to t('helpers.logic.hints'), hint_path(any_hints)
-          - if any_helps
-            %li
-              = link_to t('helpers.logic.helps'), help_path(any_helps)
+      %li
+        = link_to t('helpers.logic.contests'), contests_path
+      %li
+        = link_to t('helpers.logic.organizations'), organizations_path
     %ul.nav.navbar-nav.navbar-right
       - if signed_in?
         %li.dropdown
           %a.dropdown-toggle{ href: "#", "data-toggle" => :dropdown }
-            = t('helpers.logic.contest_requests')
+            = t('helpers.logic.laboratory')
             %b.caret
-          %ul.dropdown-menu
-            %li
-              = link_to t('.see_contest_requests'), contest_requests_path
+          %ul.dropdown-menu.right-align
             %li
               = link_to t('.new_contest_requests'), new_contest_request_path
+            %li
+              = link_to t('.see_contest_requests'), contest_requests_path
         - if admin_signed_in?
           %li
             = link_to t('web.admin.panel'), admin_path
