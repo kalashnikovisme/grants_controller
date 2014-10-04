@@ -16,14 +16,26 @@
           .navbar-brand
             = t('helpers.logic.actual_contests')
         %li
-          = link_to t('.all_contests'), '#all', id: 'all_link'
+          = link_to  '#all', id: 'all_link' do
+            = t('.all_contests')
+            %sup
+              = @actual_contests.count
         - Contest.subject.values.each do |subject|
           %li
-            = link_to t("enumerize.contest.subject.#{subject}"), "##{subject}", id: "#{subject}_link"
+            = link_to "##{subject}", id: "#{subject}_link" do
+              = local_name_of_enumerize subject
+              %sup
+                = contests_of_subject_count(@actual_contests, subject)
       #all
         = render partial: "table", locals: { contests: @actual_contests }
       - Contest.subject.values.each do |subject|
+        - contests = contests_of_subject(@actual_contests, subject)
         %div{ id: "#{subject}" }
-          = render partial: "table", locals: { contests: contests_of_subject(@actual_contests, subject) }
+          - if there_is_not_contests?(contests)
+            .empty_tab
+              %span
+                = t('.there_is_not_actual_contests_on_subject_now', subject: local_name_of_enumerize(subject))
+          - else
+            = render partial: "table", locals: { contests: contests }
   #old
     = render partial: "table", locals: { contests: @old_contests }
